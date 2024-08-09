@@ -1,0 +1,129 @@
+.container-xxl {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(248 249 251);
+
+}
+/*Thanh Điều Hướng*/
+.col-12.col12-backgroup{
+    background-color: rgb(248 249 251);
+    border-radius: 10px;
+    height: 42px;
+}
+
+.bi.bi-bell,
+.bi.bi-box-arrow-right
+{
+    background-color: #BF4080;
+    border-radius: 10px;
+    color: white;
+    width:30px ;
+    height:30px;
+}
+
+/*Thanh Điều Hướng*/
+/*Hình ảnh */
+.list-group-item-image-user{
+    list-style-type: none;
+    border-radius: 20px;
+    background-color: #BF4080;
+    border-bottom: 2px;
+    height: 150px;
+    width: 200px;
+
+}
+.img-thumbnail-user{
+    border-radius: 5px;
+    background-color: #ffffff;
+    width: 70px;
+    height: 100px;
+}
+/*Hình ảnh */
+/*Danh Sách*/
+.col-3.col3-list-group{
+    background-color: rgb(248 249 251);
+    border-radius: 10px;
+    margin-left: 7px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 17%;
+}
+.list-group-item{
+    background-color: rgb(248 249 251);
+    border: none;
+    color: rgb(60, 60, 60);
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.list-group-item:hover:hover{
+    border-radius: 10px;
+    width: 84%;
+    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
+}
+.list-group-item:hover,
+.list-group-item:hover .bi.bi-houses ,
+.list-group-item:hover .bi.bi-person-badge,
+.list-group-item:hover .bi.bi-window,
+.list-group-item:hover .bi.bi-window-stack,
+.list-group-item:hover .bi.bi-postcard,
+.list-group-item:hover .bi.bi-file-image,
+.list-group-item:hover .bi.bi-clipboard-check,
+.list-group-item:hover .bi.bi-clipboard-pulse
+
+{
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 900;
+    text-align: center;
+}
+.list-group-item:hover .bi.bi-houses,
+.list-group-item:hover .bi.bi-person-badge,
+.list-group-item:hover .bi.bi-motherboard,
+.list-group-item:hover .bi.bi-window,
+.list-group-item:hover .bi.bi-window-stack,
+.list-group-item:hover .bi.bi-postcard,
+.list-group-item:hover .bi.bi-file-image,
+.list-group-item:hover .bi.bi-clipboard-check,
+.list-group-item:hover .bi.bi-clipboard-pulse
+{
+    background-color: #BF4080;
+    color: white;
+}
+.bi.bi-houses,
+.bi.bi-person-badge,
+.bi.bi-motherboard,
+.bi.bi-window,
+.bi.bi-window-stack,
+.bi.bi-postcard,
+.bi.bi-file-image,
+.bi.bi-clipboard-check,
+.bi.bi-clipboard-pulse
+{
+    width:25px ;
+    height:25px ;
+    margin-right: 4px;
+    border-radius: 5px;
+    background-color: white;
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(167, 167, 167, 0.3);
+}
+
+*Danh Sách*/
+
+/*Content*/
+.col-9{
+    background-color: rgb(245, 245, 245);
+    width: 82%;
+    border-radius: 10px;
+    margin-left: 6px;
+    margin-top: 4px;
+    margin-bottom: 3px;
+}
+
+
+
+/*Content*/

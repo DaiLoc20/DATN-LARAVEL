@@ -1,0 +1,31 @@
+/*Thanh điều hướng*/
+.navbar.navbar-expand-lg{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 70px;
+    width: 110%;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
+}
+
+.btn.btn-search,
+.btn.btn-search:hover
+{
+    background-color: #BF4080;
+    color: white;
+
+}
+
+.navbar-brand.name{
+    color: #000000;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.bi.bi-motherboard.icon-brand{
+    background-color: #BF4080;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
+}

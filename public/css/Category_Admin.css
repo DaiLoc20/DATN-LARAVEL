@@ -1,0 +1,146 @@
+/*Thanh điều hướng*/
+.navbar.navbar-expand-lg{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 70px;
+    width: 110%;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
+}
+
+.btn.btn-search,
+.btn.btn-search:hover
+{
+    background-color: #BF4080;
+    color: white;
+
+}
+
+.navbar-brand.name{
+    color: #000000;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.bi.bi-motherboard.icon-brand{
+    background-color: #BF4080;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
+}
+/*Thanh điều hướng*/
+
+/*Bảng loại sản phẩm cha*/
+.table.Parent{
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
+    font-family: 'Roboto', sans-serif;
+ }
+/*Bảng loại sản phẩm cha*/
+/*th-td*/
+.parent-border-th-stt,
+.parent-border-th-nameParent,
+.parent-border-th-img,
+.children-border-th-stt,
+.children-border-th-nameChildren,
+.children-border-th-nameParent
+{
+   border-right:  1px solid white;
+}
+
+.parent-border-td-stt,.parent-border-td-nameParent,.parent-border-td-img,.parent-border-td-function,
+.children-border-td-stt,.children-border-td-nameChildren,.children-border-td-nameParent,.children-border-td-function
+{
+    border-right: 1px solid #f1e6ec;
+    border-bottom: 1px solid #f1e6ec;
+}
+
+.img-parent{
+ width: 50px;
+}
+/*th-td*/
+/*Bảng loại sản phẩm con*/
+.table.Children{
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
+    font-family: 'Roboto', sans-serif;
+}
+.table-backgroupColor{
+    font-size: 13px;
+    --bs-table-color: white;
+    --bs-table-bg: #BF4080 ;
+
+}
+/*Bảng loại sản phẩm con*/
+
+/*nút*/
+.edit-delete-parent
+{
+    display: flex;
+    margin-left: 37%;
+}
+.edit-delete-children
+{
+    display: flex;
+    margin-left: 33%;
+}
+
+
+.edit{
+    margin-right: 4px;
+}
+/*nút*/
+
+
+/*Phân trang loại sản phẩm cha */
+.pagination-margin-parent{
+
+    margin-left: 45%;
+}
+
+/*Phân trang loại sản phẩm cha */
+.pagination-margin-children{
+    margin-left: 45%;
+  }
+.custom-pagination .page-item .page-link {
+    background-color: #BF4080;
+    border-color: #BF4080;
+    --bs-pagination-font-size: 0.8rem;
+    color: white;
+}
+
+.custom-pagination .page-item.active .page-link {
+    background-color: #8e2f5f;
+    border-color: #8e2f5f;
+}
+
+.custom-pagination .page-item .page-link:hover {
+    background-color: #a3366d;
+    border-color: #a3366d;
+}
+
+.custom-pagination .page-item.disabled .page-link {
+    background-color: #d67eab;
+    border-color: #d67eab;
+    color: #f1e6ec;
+}
+
