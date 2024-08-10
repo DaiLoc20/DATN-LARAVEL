@@ -7,13 +7,13 @@
     border: 1px solid white;
     border-radius: 15px;
     background-color: white;
-    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
+    box-shadow: 0 0 1.5px 1.5px #bf80ff;
 }
 
 .btn.btn-search,
 .btn.btn-search:hover
 {
-    background-color: #BF4080;
+    background-color: #8c00ff;
     color: white;
 
 }
@@ -25,7 +25,7 @@
 }
 
 .bi.bi-motherboard.icon-brand{
-    background-color: #BF4080;
+    background-color: #8c00ff;
     color: rgb(255, 255, 255);
     box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
 }
@@ -87,8 +87,7 @@
 .table-backgroupColor{
     font-size: 13px;
     --bs-table-color: white;
-    --bs-table-bg: #BF4080 ;
-
+    --bs-table-bg:  #8c00ff ;
 }
 /*Bảng loại sản phẩm con*/
 
@@ -121,26 +120,26 @@
 .pagination-margin-children{
     margin-left: 45%;
   }
-.custom-pagination .page-item .page-link {
-    background-color: #BF4080;
-    border-color: #BF4080;
+  .custom-pagination .page-item .page-link {
+    background-color: #8c00ff; /* Màu tím chính */
+    border-color: #8c00ff;
     --bs-pagination-font-size: 0.8rem;
     color: white;
 }
 
 .custom-pagination .page-item.active .page-link {
-    background-color: #8e2f5f;
-    border-color: #8e2f5f;
+    background-color: #6600bf; /* Màu tím đậm hơn cho trạng thái active */
+    border-color: #6600bf;
 }
 
 .custom-pagination .page-item .page-link:hover {
-    background-color: #a3366d;
-    border-color: #a3366d;
+    background-color: #a64dff; /* Màu tím nhạt hơn khi hover */
+    border-color: #a64dff;
 }
 
 .custom-pagination .page-item.disabled .page-link {
-    background-color: #d67eab;
-    border-color: #d67eab;
-    color: #f1e6ec;
+    background-color: #bf80ff; /* Màu tím nhạt hơn cho trạng thái disabled */
+    border-color: #bf80ff;
+    color: #f2e6ff; /* Màu chữ nhạt hơn cho trạng thái disabled */
 }
 

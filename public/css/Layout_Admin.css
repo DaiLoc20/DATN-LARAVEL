@@ -3,12 +3,12 @@
     max-width: none;
     height: 100%;
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(248 249 251);
+    background-color: rgb(255, 255, 255);
 
 }
 /*Thanh Điều Hướng*/
 .col-12.col12-backgroup{
-    background-color: rgb(248 249 251);
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     height: 42px;
 }
@@ -16,7 +16,7 @@
 .bi.bi-bell,
 .bi.bi-box-arrow-right
 {
-    background-color: #BF4080;
+    background-color: #8c00ff;
     border-radius: 10px;
     color: white;
     width:30px ;
@@ -27,8 +27,11 @@
 /*Hình ảnh */
 .list-group-item-image-user{
     list-style-type: none;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 10px;
     border-radius: 20px;
-    background-color: #BF4080;
+    background-color: #8c00ff;
     border-bottom: 2px;
     height: 150px;
     width: 200px;
@@ -43,15 +46,16 @@
 /*Hình ảnh */
 /*Danh Sách*/
 .col-3.col3-list-group{
-    background-color: rgb(248 249 251);
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    margin-left: 7px;
+    margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 17%;
+    box-shadow: 0 0 1.5px 1.5px #bf80ff;
 }
 .list-group-item{
-    background-color: rgb(248 249 251);
+    background-color: rgb(255 255 255);
     border: none;
     color: rgb(60, 60, 60);
     font-size: 15px;
@@ -59,26 +63,15 @@
     margin-top: 5px;
     margin-bottom: 5px;
 }
-.list-group-item:hover:hover{
+.list-group-item:hover{
     border-radius: 10px;
-    width: 84%;
-    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
-}
-.list-group-item:hover,
-.list-group-item:hover .bi.bi-houses ,
-.list-group-item:hover .bi.bi-person-badge,
-.list-group-item:hover .bi.bi-window,
-.list-group-item:hover .bi.bi-window-stack,
-.list-group-item:hover .bi.bi-postcard,
-.list-group-item:hover .bi.bi-file-image,
-.list-group-item:hover .bi.bi-clipboard-check,
-.list-group-item:hover .bi.bi-clipboard-pulse
-
-{
-    background-color: white;
-    border-radius: 5px;
-    font-weight: 900;
+    width: 100%;
+    background-color: #8c00ff;
+    color: white;
     text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 800;
 }
 .list-group-item:hover .bi.bi-houses,
 .list-group-item:hover .bi.bi-person-badge,
@@ -90,8 +83,8 @@
 .list-group-item:hover .bi.bi-clipboard-check,
 .list-group-item:hover .bi.bi-clipboard-pulse
 {
-    background-color: #BF4080;
-    color: white;
+    background-color: #ffffff;
+    color: #8c00ff;
 }
 .bi.bi-houses,
 .bi.bi-person-badge,
@@ -107,7 +100,8 @@
     height:25px ;
     margin-right: 4px;
     border-radius: 5px;
-    background-color: white;
+    color: white;
+    background-color: #8c00ff;
     transform: scale(1.2);
     box-shadow: 0 4px 8px rgba(167, 167, 167, 0.3);
 }
@@ -116,7 +110,7 @@
 
 /*Content*/
 .col-9{
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(255, 255, 255);
     width: 82%;
     border-radius: 10px;
     margin-left: 6px;
