@@ -39,6 +39,7 @@
           </div>
         </div>
       </nav>
+    <div class="Parent-Children">
     <!-- Bảng Loại Sản Phẩm Cha-->
         <table class="table Parent">
         <thead class="table-backgroupColor">
@@ -82,16 +83,6 @@
             @endforeach
         </tbody>
        </table>
-       <div class="pagination-margin-parent">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination custom-pagination">
-                {{ $parentCategories->appends(['child_page' => request('child_page')])->links() }}
-            </ul>
-        </nav>
-       </div>
-
-
-
     <!-- Bảng Loại Sản Phẩm Cha-->
 
     <!-- Bảng Loại Sản Phẩm Con-->
@@ -133,14 +124,23 @@
             @endforeach
         </tbody>
     </table>
-    <div class="pagination-margin-children">
+  <!-- Bảng Loại Sản Phẩm Con-->
+    </div>
+
+    <div class="pagination-parent-children">
+       <div class="pagination-margin-parent">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination custom-pagination">
+                {{ $parentCategories->appends(['child_page' => request('child_page')])->links() }}
+            </ul>
+        </nav>
+       </div>
+       <div class="pagination-margin-children">
         <nav aria-label="Page navigation example">
             <ul class="pagination custom-pagination">
                 {{ $childCategories->appends(['parent_page' => request('parent_page')])->links() }}
             </ul>
         </nav>
-    </div>
-  <!-- Bảng Loại Sản Phẩm Con-->
     </div>
     @endsection
 

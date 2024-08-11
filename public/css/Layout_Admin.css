@@ -6,24 +6,7 @@
     background-color: rgb(255, 255, 255);
 
 }
-/*Thanh Điều Hướng*/
-.col-12.col12-backgroup{
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    height: 42px;
-}
 
-.bi.bi-bell,
-.bi.bi-box-arrow-right
-{
-    background-color: #8c00ff;
-    border-radius: 10px;
-    color: white;
-    width:30px ;
-    height:30px;
-}
-
-/*Thanh Điều Hướng*/
 /*Hình ảnh */
 .list-group-item-image-user{
     list-style-type: none;
@@ -35,7 +18,6 @@
     border-bottom: 2px;
     height: 150px;
     width: 200px;
-
 }
 .img-thumbnail-user{
     border-radius: 5px;
@@ -49,17 +31,17 @@
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 10px;
     width: 17%;
-    box-shadow: 0 0 1.5px 1.5px #bf80ff;
+   /* box-shadow: 0 0 1.5px 1.5px #bf80ff;*/
 }
 .list-group-item{
     background-color: rgb(255 255 255);
     border: none;
     color: rgb(60, 60, 60);
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -70,7 +52,6 @@
     color: white;
     text-align: center;
     font-size: 14px;
-    text-transform: uppercase;
     font-weight: 800;
 }
 .list-group-item:hover .bi.bi-houses,
@@ -81,7 +62,8 @@
 .list-group-item:hover .bi.bi-postcard,
 .list-group-item:hover .bi.bi-file-image,
 .list-group-item:hover .bi.bi-clipboard-check,
-.list-group-item:hover .bi.bi-clipboard-pulse
+.list-group-item:hover .bi.bi-clipboard-pulse,
+.list-group-item:hover .bi.bi-box-arrow-right
 {
     background-color: #ffffff;
     color: #8c00ff;
@@ -94,7 +76,8 @@
 .bi.bi-postcard,
 .bi.bi-file-image,
 .bi.bi-clipboard-check,
-.bi.bi-clipboard-pulse
+.bi.bi-clipboard-pulse,
+.bi.bi-box-arrow-right
 {
     width:25px ;
     height:25px ;

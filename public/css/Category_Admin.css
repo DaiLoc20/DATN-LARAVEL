@@ -6,7 +6,7 @@
     width: 110%;
     border: 1px solid white;
     border-radius: 15px;
-    background-color: white;
+    background-color: #ffffff;
     box-shadow: 0 0 1.5px 1.5px #bf80ff;
 }
 
@@ -25,12 +25,15 @@
 }
 
 .bi.bi-motherboard.icon-brand{
+    font-family: 'Roboto', sans-serif;
     background-color: #8c00ff;
-    color: rgb(255, 255, 255);
+    color: rgb(54, 10, 10);
     box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
 }
 /*Thanh điều hướng*/
-
+.Parent-Children{
+    display: flex;
+}
 /*Bảng loại sản phẩm cha*/
 .table.Parent{
     text-align: center;
@@ -38,7 +41,7 @@
     border: 1px solid;
     border-radius: 15px;
     overflow: hidden;
-    max-width: 100%;
+    max-width: 50%;
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -76,7 +79,7 @@
     border: 1px solid;
     border-radius: 15px;
     overflow: hidden;
-    max-width: 100%;
+    max-width: 50%;
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -95,12 +98,12 @@
 .edit-delete-parent
 {
     display: flex;
-    margin-left: 37%;
+    margin-left: 15%;
 }
 .edit-delete-children
 {
     display: flex;
-    margin-left: 33%;
+    margin-left: 12%;
 }
 
 
@@ -110,15 +113,21 @@
 /*nút*/
 
 
+
+/*Phân trang*/
+.pagination-parent-children{
+   display: flex;
+}
+
 /*Phân trang loại sản phẩm cha */
 .pagination-margin-parent{
 
-    margin-left: 45%;
+    margin-left: 6%;
 }
 
 /*Phân trang loại sản phẩm cha */
 .pagination-margin-children{
-    margin-left: 45%;
+    margin-left: 49%;
   }
   .custom-pagination .page-item .page-link {
     background-color: #8c00ff; /* Màu tím chính */
@@ -142,4 +151,4 @@
     border-color: #bf80ff;
     color: #f2e6ff; /* Màu chữ nhạt hơn cho trạng thái disabled */
 }
-
+/*Phân trang*/

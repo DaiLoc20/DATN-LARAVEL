@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -11,7 +11,14 @@ class UserController extends Controller
      */
     public function index_user_admin()
     {
-        return view('Admin/User/User-List');
+       $admin = User::where('is_user_admin',1)
+       ->with('Images')
+       ->paginate(10,['*'],'admin_page');
+
+       $user  = User::where('is_user_admin',0)
+       ->with('Images')
+       ->paginate(5,['*'],'user_page');
+        return view('Admin/User/User-List',compact('admin','user'));
     }
 
     public function index_admin()

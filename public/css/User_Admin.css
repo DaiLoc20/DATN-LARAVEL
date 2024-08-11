@@ -29,3 +29,35 @@
     color: rgb(255, 255, 255);
     box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
 }
+
+.table.Admin{
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 110%;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
+    font-family: 'Roboto', sans-serif;
+ }
+ .table-backgroupColor{
+    font-size: 12px;
+    --bs-table-color: white;
+    --bs-table-bg:  #8c00ff ;
+}
+
+/*nút*/
+.edit-delete-admin
+{
+    display: flex;
+    margin-left: 10%;
+}
+
+.edit{
+    margin-right: 4px;
+}
+/*nút*/
