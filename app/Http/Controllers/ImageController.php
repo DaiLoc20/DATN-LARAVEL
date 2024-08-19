@@ -19,7 +19,10 @@ class ImageController extends Controller
         $brandImages = Image::whereNotNull('BrandID')
         ->with('brands')
         ->paginate(6, ['*'], 'brand_page');
-        return view('/Admin/Image/Image-List',compact('categoryImages','brandImages'));
+        $userImages = Image::whereNotNull('UserID')
+        ->with('users')
+        ->paginate(10, ['*'], 'user_page');
+        return view('/Admin/Image/Image-List',compact('categoryImages','brandImages','userImages'));
     }
 
     /**

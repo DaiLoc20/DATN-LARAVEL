@@ -20,10 +20,19 @@
                 <div class="col-3 col3-list-group">
                     <ul class="list-group list-group-backgroup">
                         <li class="list-group-item-image-user">
-                            <img src="..." class="img-thumbnail-user" alt="...">
+                            @auth
+                               <div>
+                                    @if(Auth::user()->images->isNotEmpty())
+                                        <img src="{{ asset(Auth::user()->images->first()->path) }}" class="img-thumbnail-user" alt="{{ Auth::user()->last_name.' '.Auth::user()->first_name }}">
+                                     @else
+                                        <img src="{{ asset('path/to/default/avatar.png') }}" class="img-thumbnail-user" alt="Default Avatar">
+                                    @endif
+                               </div>
+                                <p class="font-last-first_name">{{Auth::user()->last_name.' '.Auth::user()->first_name}}</p>
+                            @endauth
                         </li>
                         <li class="list-group-item">
-                            <a class="nav-link"href="/Layouts/Layout_Admin">
+                            <a class="nav-link"href="/Home">
                             <i class="bi bi-houses"></i>
                             <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-houses" fill="currentColor" viewBox="0 -3 15 22"><path d="M5.793 1a1 1 0 0 1 1.414 0l.647.646a.5.5 0 1 1-.708.708L6.5 1.707 2 6.207V12.5a.5.5 0 0 0 .5.5.5.5 0 0 1 0 1A1.5 1.5 0 0 1 1 12.5V7.207l-.146.147a.5.5 0 0 1-.708-.708zm3 1a1 1 0 0 1 1.414 0L12 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l1.854 1.853a.5.5 0 0 1-.708.708L15 8.207V13.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 4 13.5V8.207l-.146.147a.5.5 0 1 1-.708-.708zm.707.707L5 7.207V13.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5V7.207z"/></svg>
                             Trang Chủ
@@ -55,9 +64,11 @@
                         </li>
 
                         <li class="list-group-item">
+                            <a class="nav-link"href="/Admin/Product/ProductList">
                             <i class="bi bi-window-stack"></i>
                             <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-window-stack" viewBox="0 -3 16 22"><path d="M4.5 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M6 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/><path d="M12 1a2 2 0 0 1 2 2 2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2 2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM2 12V5a2 2 0 0 1 2-2h9a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1m1-4v5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8zm12-1V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v2z"/></svg>
                             Sản Phẩm
+                           </a>
                         </li>
 
                         <li class="list-group-item">
@@ -85,9 +96,16 @@
                             Thống Kê
                         </li>
                         <li class="list-group-item">
-                            <i class="bi bi-box-arrow-right"></i>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 -3 16 22"> <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/> <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/> </svg>
-                            Đăng Xuất
+                            @auth
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                    <button type="submit" class="logout-button">
+                                      <i class="bi bi-box-arrow-right"></i>
+                                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 -3 16 22"> <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/> <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/> </svg>
+                                       ĐĂNG XUẤT
+                                    </button>
+                            </form>
+                            @endauth
                         </li>
 
 
@@ -96,9 +114,16 @@
             @show
 
             <div class="col-9">
+                @if (session('success'))
+                    <div id="flash-message" class="message-success"> {{ session('success') }} </div>
+                @endif
+
+                @if (session('failure'))
+                    <div id="flash-message" class="message-failure"> {{ session('failure') }} </div>
+                @endif
                 <div class="container">
-                @yield('content')
-                 </div>
+                    @yield('content')
+                </div>
             </div>
 
             @section('footer')
@@ -108,7 +133,7 @@
         </div>
     </div>
     </div>
-
+    <script src="{{ asset('js/admin-user-message.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>

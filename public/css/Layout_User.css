@@ -1,0 +1,24 @@
+.container-xxl {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+.navbar.navbar-expand-lg{
+    margin-top: 1px;
+    margin-bottom: 10px;
+    height: 70px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.nav-login-card{ display: flex; font-weight: 900;}
+.nav-link.nav-font-login { margin-right: 30px; color: #8c00ff;}
+.nav-link.nav-font-card { margin-right: 20px; color: #8c00ff;}
+.message-success,.message-failure{
+    font-weight: 600; font-size: 15px; text-align: center; color: #00914d;
+    border: 1px solid #00914d; border-radius: 10px;
+    margin-top: 10px; margin-left: 40%;
+    width: 200px; height: 50px; padding: 10px;
+    box-shadow:0  0 1px 1px #00914d;
+}

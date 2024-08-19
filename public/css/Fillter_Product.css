@@ -1,0 +1,54 @@
+/*Thanh điều hướng*/
+.navbar.navbar-expand-lg{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 70px;
+    width: 110%;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 0 1.5px 1.5px #bf80ff;
+}
+.nav-link.nav-font-fillterproduct{ font-weight: 900; color: #000000; } .nav-link.nav-font-fillterproduct:hover{ font-weight: 900; color: #000000; }
+.btn.btn-search,.btn.btn-search:hover { background-color: #8c00ff; color: white;}
+.navbar-brand.name{ color: #000000; font-weight: 900; font-size: 15px; }
+.bi.bi-motherboard.icon-brand{
+    background-color: #8c00ff;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
+}
+/*Bảng bộ lọc sản phẩm*/
+.font-p-fillterproduct{ font-size: 15px; font-weight: 900; text-align: center;}
+.table.FillterProduct{
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 3%;
+    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
+    font-family: 'Roboto', sans-serif;
+ }
+/*Bảng bộ lọc sản phẩm */
+/*th-td*/
+.fillterproduct-border-th-stt,.fillterproduct-border-th-nameProduct,.fillterproduct-border-th-nameFillter,.fillterproduct-border-th-function
+{ border-right:  1px solid white; }
+.fillterproduct-border-td-stt,.fillterproduct-border-td-nameProduct,.fillterproduct-border-td-nameFillter,.fillterproduct-border-td-function
+{ border-right: 1px solid #f1e6ec; border-bottom: 1px solid #f1e6ec; vertical-align: middle; }
+/*th-td*/
+.table-backgroupColor{font-size: 13px;--bs-table-color: white;--bs-table-bg:  #8c00ff ;}
+/*nút*/
+.edit-delete-fillterproduct { display: flex;margin-left: 30%; }
+.edit { margin-right: 4px; }
+/*nút*/
+/*Phân trang bảng bộ lọc sản phẩm */
+.pagination-margin-fillterproduct{ margin-left: 5%; }
+.custom-pagination .page-item .page-link { background-color: #8c00ff; border-color: #8c00ff;--bs-pagination-font-size: 0.8rem; color: white; }
+.custom-pagination .page-item.active .page-link { background-color: #6600bf; border-color: #6600bf; }
+.custom-pagination .page-item .page-link:hover {background-color: #a64dff; border-color: #a64dff;}
+.custom-pagination .page-item.disabled .page-link { background-color: #bf80ff; border-color: #bf80ff;color: #f2e6ff; }
+/*Phân trang bảng bộ lọc sản phẩm */

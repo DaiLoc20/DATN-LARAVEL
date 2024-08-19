@@ -13,6 +13,18 @@ class ImageSeeder extends Seeder
      */
     public function run(): void
     {
+        //Hình ảnh của User và Admin
+        Image::create(['UserID'=>1,'path'=>'/img/Admin/AD-01.jpg']);
+        Image::create(['UserID'=>2,'path'=>'/img/Admin/AD-02.jpg']);
+        Image::create(['UserID'=>3,'path'=>'/img/Admin/AD-03.jpg']);
+        Image::create(['UserID'=>4,'path'=>'/img/Admin/AD-04.jpg']);
+        Image::create(['UserID'=>5,'path'=>'/img/Admin/AD-05.jpg']);
+        Image::create(['UserID'=>6,'path'=>'/img/Admin/AD-06.jpg']);
+        Image::create(['UserID'=>7,'path'=>'/img/Admin/AD-07.jpg']);
+
+        Image::create(['UserID'=>8,'path'=>'/img/User/US-01.jpg']);
+        Image::create(['UserID'=>9,'path'=>'/img/User/US-02.jpg']);
+        //Hình ảnh của User và Admin
         //Hình ảnh của Loại Sản Phẩm
         Image::create(['CategoryID'=>1,'path'=>'/img/Category/CATEGORY-PC.jpg']);
         Image::create(['CategoryID'=>2,'path'=>'/img/Category/CATEGORY-LAPTOP.jpg']);

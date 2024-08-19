@@ -10,32 +10,17 @@
     box-shadow: 0 0 1.5px 1.5px #bf80ff;
 }
 
-.btn.btn-search,
-.btn.btn-search:hover
-{
-    background-color: #8c00ff;
-    color: white;
-
-}
-
-.navbar-brand.name{
-    color: #000000;
-    font-weight: 900;
-    font-size: 15px;
-}
-
-.bi.bi-window.icon-category{
-    background-color: #8c00ff;
-    color: rgb(255, 255, 255);
-    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
-}
+.btn.btn-search,.btn.btn-search:hover{ background-color: #8c00ff; color: white; }
+.navbar-brand.name{ color: #000000; font-weight: 900; font-size: 15px;}
+.bi.bi-window.icon-category{ background-color: #8c00ff; color: rgb(255, 255, 255); box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3); }
 /*Thanh điều hướng*/
 
 
 /*Bảng Danh Sách*/
+.font-p-brand{ font-size: 15px; margin-left: 40%; font-weight: 900;}
 .table{
    text-align: center;
-   font-size: 13PX;
+   font-size: 13px;
    border: 1px solid;
    border-radius: 15px;
    overflow: hidden;
@@ -66,9 +51,10 @@
 
 /*th*/
 /*td*/
-.border-width-STT,.border-width-Name,.border-width-Img{border-right: 1px solid #f1e6ec;}
+.border-width-STT,.border-width-Name,.border-width-Img{border-right: 1px solid #f1e6ec;  vertical-align: middle;}
 .border-width-Function{
     width: 15%;
+    vertical-align: middle;
 }
 
 .img-brand{

@@ -22,12 +22,13 @@
           <a class="navbar-brand name" href="/Admin/Fillter/FillterList">
             <i class="bi bi-postcard"></i>
             <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-postcard" viewBox="0 -2 15 22"> <path fill-rule="evenodd" d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm7.5.5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0zM2 5.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5M10.5 5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM13 8h-2V6h2z"/> </svg>
-            BỘ LỌC
+            DANH SÁCH BỘ LỌC
           </a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-
+                <li class="nav-item ">
+                    <a class="nav-link nav-font-fillterproduct"  href="/Admin/Fillter/FillterList/FillterProduct">BỘ LỌC SẢN PHẨM</a>
+                </li>
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Tìm kiếm tên ..." aria-label="search">
@@ -39,7 +40,9 @@
           </div>
         </div>
       </nav>
+    <div>
 
+    </div>
     <!-- Bảng Bộ Lọc Cha-->
     <div class="Parent-Children">
         <table class="table Parent">
@@ -56,7 +59,7 @@
             @endphp
             @foreach($parentFillter as $parent)
             <tr>
-                <td class="parent-border-td-stt">{{ $stt++ }}</td>
+                <td class="parent-border-td-stt">{{$parent->id }}</td>
                 <td class="parent-border-td-nameParent">{{ $parent->name }}</td>
                 <td class="parent-border-td-function">
                     <div class="edit-delete-parent">
@@ -100,7 +103,7 @@
             @endphp
             @foreach($childFillter as $child)
             <tr>
-                <td class="children-border-td-stt">{{ $stt++ }}</td>
+                <td class="children-border-td-stt">{{ $child->id }}</td>
                 <td class="children-border-td-nameChildren">{{ $child->name }}</td>
                 <td class="children-border-td-nameParent">{{ $child->parent->name }}</td>
                 <td class="children-border-td-function">

@@ -12,15 +12,21 @@ class Image extends Model
 
     public function products()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Product::class,'ProductID','id');
     }
     public function brands()
     {
-        return $this->belongsTo(Brands::class, 'BrandID');
+        return $this->belongsTo(Brands::class, 'BrandID','id');
     }
     public function category()
     {
-        return $this->belongsTo(Category::class,'CategoryID');
+        return $this->belongsTo(Category::class,'CategoryID','id');
     }
+
+    public function users()
+    {
+        return $this->belongsTo(User::class,'UserID','id');
+    }
+
 
 }

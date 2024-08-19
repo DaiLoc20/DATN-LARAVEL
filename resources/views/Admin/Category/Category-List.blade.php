@@ -39,6 +39,11 @@
           </div>
         </div>
       </nav>
+
+    <div class="font-parent-children">
+        <p class="font-p-parent">DANH SÁCH LOẠI SẢN PHẨM ( PARENT )</p>
+        <p class="font-p-children">DANH SÁCH LOẠI SẢN PHẨM ( CHILDREN )</p>
+    </div>
     <div class="Parent-Children">
     <!-- Bảng Loại Sản Phẩm Cha-->
         <table class="table Parent">
@@ -56,7 +61,7 @@
             @endphp
             @foreach($parentCategories as $parent)
             <tr>
-                <td class="parent-border-td-stt">{{ $stt++ }}</td>
+                <td class="parent-border-td-stt">{{  $parent->id }}</td>
                 <td class="parent-border-td-nameParent">{{ $parent->name }}</td>
                 <td class="parent-border-td-img">
                     @foreach($parent->images as $image)
@@ -101,7 +106,7 @@
             @endphp
             @foreach($childCategories as $child)
             <tr>
-                <td class="children-border-td-stt">{{ $stt++ }}</td>
+                <td class="children-border-td-stt">{{ $child->id }}</td>
                 <td class="children-border-td-nameChildren">{{ $child->name }}</td>
                 <td class="children-border-td-nameParent">{{ $child->parent->name }}</td>
                 <td class="children-border-td-function">

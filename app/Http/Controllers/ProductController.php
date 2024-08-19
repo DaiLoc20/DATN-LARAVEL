@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 
@@ -11,9 +12,11 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index_product_admin()
     {
-        //
+        $products = Product::with(['category','brand','images'])
+        ->paginate(10, ['*'], 'products_page');
+        return view('/Admin/Product/Product-List', compact('products'));
     }
 
     /**

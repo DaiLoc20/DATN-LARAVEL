@@ -4,27 +4,31 @@
     height: 100%;
     font-family: 'Roboto', sans-serif;
     background-color: rgb(255, 255, 255);
-
 }
-
+/*Thông báo đăng nhập và đăng xuất*/
+#flash-message { transition: opacity 0.5s ease-out; }
+#flash-message.hide { opacity: 0; }
+.message-success,.message-failure{
+    font-weight: 600; font-size: 15px; text-align: center; color: #00914d;
+    border: 1px solid #00914d; border-radius: 10px;
+    margin-top: 10px; margin-left: 40%;
+    width: 200px; height: 50px; padding: 10px;
+    box-shadow:0  0 1px 1px #00914d;
+}
+.logout-button{ border: none;  background-color: white; font-weight: 900; margin: 0px -6px; }
+.list-group-item:hover .logout-button{ color: white; background-color: #8c00ff; }
+/*Thông báo đăng nhập và đăng xuất*/
 /*Hình ảnh */
 .list-group-item-image-user{
     list-style-type: none;
-    margin-top: 10px;
-    margin-left: 15px;
-    margin-bottom: 10px;
-    border-radius: 20px;
+    margin-top: 10px; margin-left: 15px; margin-bottom: 10px;
+    border-radius: 20px; border-bottom: 2px;
+    height: 150px; width: 200px;
     background-color: #8c00ff;
-    border-bottom: 2px;
-    height: 150px;
-    width: 200px;
 }
-.img-thumbnail-user{
-    border-radius: 5px;
-    background-color: #ffffff;
-    width: 70px;
-    height: 100px;
-}
+
+.img-thumbnail-user{ border-radius: 15px; margin-top: 15px; margin-left: 50px; width: 100px;height: 100px; }
+.font-last-first_name { color: white; font-weight: 900; margin-left: 30px; margin-top: 5px; margin-bottom: 5px;}
 /*Hình ảnh */
 /*Danh Sách*/
 .col-3.col3-list-group{
@@ -41,7 +45,8 @@
     border: none;
     color: rgb(60, 60, 60);
     font-size: 15px;
-    font-weight: 500;
+    text-transform: uppercase;
+    font-weight: 900;
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -89,12 +94,12 @@
     box-shadow: 0 4px 8px rgba(167, 167, 167, 0.3);
 }
 
-*Danh Sách*/
+/*Danh Sách*/
 
 /*Content*/
+
 .col-9{
     background-color: rgb(255, 255, 255);
-    width: 82%;
     border-radius: 10px;
     margin-left: 6px;
     margin-top: 4px;

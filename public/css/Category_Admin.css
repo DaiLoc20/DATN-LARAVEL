@@ -10,30 +10,14 @@
     box-shadow: 0 0 1.5px 1.5px #bf80ff;
 }
 
-.btn.btn-search,
-.btn.btn-search:hover
-{
-    background-color: #8c00ff;
-    color: white;
-
-}
-
-.navbar-brand.name{
-    color: #000000;
-    font-weight: 900;
-    font-size: 15px;
-}
-
-.bi.bi-motherboard.icon-brand{
-    font-family: 'Roboto', sans-serif;
-    background-color: #8c00ff;
-    color: rgb(54, 10, 10);
-    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
-}
+.btn.btn-search,.btn.btn-search:hover { background-color: #8c00ff; color: white; }
+.navbar-brand.name{ color: #000000; font-weight: 900; font-size: 15px; }
+.bi.bi-motherboard.icon-brand{ font-family: 'Roboto', sans-serif; background-color: #8c00ff; color: rgb(54, 10, 10); box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3); }
 /*Thanh điều hướng*/
-.Parent-Children{
-    display: flex;
-}
+.Parent-Children{ display: flex;}
+.font-parent-children{ display: flex; }
+.font-p-parent { font-size: 15px; font-weight: 900; margin-left: 15%;}
+.font-p-children{ font-size: 15px; font-weight: 900;  margin-left: 22%; }
 /*Bảng loại sản phẩm cha*/
 .table.Parent{
     text-align: center;
@@ -51,26 +35,12 @@
  }
 /*Bảng loại sản phẩm cha*/
 /*th-td*/
-.parent-border-th-stt,
-.parent-border-th-nameParent,
-.parent-border-th-img,
-.children-border-th-stt,
-.children-border-th-nameChildren,
-.children-border-th-nameParent
-{
-   border-right:  1px solid white;
-}
-
+.parent-border-th-stt,.parent-border-th-nameParent,.parent-border-th-img,.children-border-th-stt,.children-border-th-nameChildren,.children-border-th-nameParent
+{ Border-right:  1px solid white; }
 .parent-border-td-stt,.parent-border-td-nameParent,.parent-border-td-img,.parent-border-td-function,
 .children-border-td-stt,.children-border-td-nameChildren,.children-border-td-nameParent,.children-border-td-function
-{
-    border-right: 1px solid #f1e6ec;
-    border-bottom: 1px solid #f1e6ec;
-}
-
-.img-parent{
- width: 50px;
-}
+{ border-right: 1px solid #f1e6ec; border-bottom: 1px solid #f1e6ec; vertical-align: middle; }
+.img-parent{ width: 50px; }
 /*th-td*/
 /*Bảng loại sản phẩm con*/
 .table.Children{
@@ -87,68 +57,21 @@
     box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
     font-family: 'Roboto', sans-serif;
 }
-.table-backgroupColor{
-    font-size: 13px;
-    --bs-table-color: white;
-    --bs-table-bg:  #8c00ff ;
-}
+.table-backgroupColor{font-size: 13px; --bs-table-color: white;--bs-table-bg:  #8c00ff ; }
 /*Bảng loại sản phẩm con*/
-
 /*nút*/
-.edit-delete-parent
-{
-    display: flex;
-    margin-left: 15%;
-}
-.edit-delete-children
-{
-    display: flex;
-    margin-left: 12%;
-}
-
-
-.edit{
-    margin-right: 4px;
-}
+.edit-delete-parent { display: flex; margin-left: 15%; }
+.edit-delete-children { display: flex; margin-left: 12%; }
+.edit { margin-right: 4px; }
 /*nút*/
-
-
-
 /*Phân trang*/
-.pagination-parent-children{
-   display: flex;
-}
-
+.pagination-parent-children{ display: flex; }
 /*Phân trang loại sản phẩm cha */
-.pagination-margin-parent{
-
-    margin-left: 6%;
-}
-
+.pagination-margin-parent{ margin-left: 6%; }
 /*Phân trang loại sản phẩm cha */
-.pagination-margin-children{
-    margin-left: 49%;
-  }
-  .custom-pagination .page-item .page-link {
-    background-color: #8c00ff; /* Màu tím chính */
-    border-color: #8c00ff;
-    --bs-pagination-font-size: 0.8rem;
-    color: white;
-}
-
-.custom-pagination .page-item.active .page-link {
-    background-color: #6600bf; /* Màu tím đậm hơn cho trạng thái active */
-    border-color: #6600bf;
-}
-
-.custom-pagination .page-item .page-link:hover {
-    background-color: #a64dff; /* Màu tím nhạt hơn khi hover */
-    border-color: #a64dff;
-}
-
-.custom-pagination .page-item.disabled .page-link {
-    background-color: #bf80ff; /* Màu tím nhạt hơn cho trạng thái disabled */
-    border-color: #bf80ff;
-    color: #f2e6ff; /* Màu chữ nhạt hơn cho trạng thái disabled */
-}
-/*Phân trang*/
+.pagination-margin-children{  margin-left: 49%; }
+.custom-pagination .page-item .page-link { background-color: #8c00ff; border-color: #8c00ff;--bs-pagination-font-size: 0.8rem; color: white; }
+.custom-pagination .page-item.active .page-link { background-color: #6600bf; border-color: #6600bf; }
+.custom-pagination .page-item .page-link:hover {background-color: #a64dff; border-color: #a64dff;}
+.custom-pagination .page-item.disabled .page-link { background-color: #bf80ff; border-color: #bf80ff;color: #f2e6ff; }
+/*Phân trang bảng bộ lọc sản phẩm */

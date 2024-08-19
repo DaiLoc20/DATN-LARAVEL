@@ -14,15 +14,15 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->decimal('price', 10, 2);
+            $table->bigInteger('price')->nullable();
 
-            $table->unsignedBigInteger('CategoryID');
-            $table->unsignedBigInteger('BrandID');
-            $table->unsignedBigInteger('FillterID');
+            $table->unsignedBigInteger('CategoryID')->nullable();
+            $table->unsignedBigInteger('BrandID')->nullable();
+
 
             $table->foreign('CategoryID')->references('id')->on('categories')->onDelete('cascade');
             $table->foreign('BrandID')->references('id')->on('brands')->onDelete('cascade');
-            $table->foreign('FillterID')->references('id')->on('fillters')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

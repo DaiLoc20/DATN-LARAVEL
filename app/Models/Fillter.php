@@ -11,10 +11,7 @@ class Fillter extends Model
 
     protected $guarded=[];
 
-    public function product()
-    {
-        return $this->belongsTo(Product::class);
-    }
+
 
     public function children()
     {
@@ -24,5 +21,15 @@ class Fillter extends Model
     public function parent()
     {
         return $this->belongsTo(Fillter::class, 'parent_id');
+    }
+
+    public function product_fillter()
+    {
+        return $this->hasMany(Product_Fillter::class,'FillterID','id');
+    }
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'product_fillter');
     }
 }

@@ -40,20 +40,19 @@
         </div>
       </nav>
 
-
-      <table class="table Admin">
-        <thead class="table-backgroupColor">
-            <tr>
-                <th scope="col" class="">STT</th>
-                <th scope="col" class="">HỌ</th>
-                <th scope="col" class="">TÊN</th>
-                <th scope="col" class="">EMAIL</th>
-                <th scope="col" class="">GIỚI TÍNH</th>
-                <th scope="col" class="">NGÀY SINH</th>
-                <th scope="col" class="">SỐ ĐIỆN THOẠI</th>
-                <th scope="col" class="">LOẠI TÀI KHOẢN</th>
-                <th scope="col" class="">ĐIA CHỈ</th>
-                <th scope="col" class="">CHỨC NĂNG</th>
+         <p class="font-p-admin">DANH SÁCH TÀI KHOẢN ADMIN</p>
+         <table  class="table Admin">
+          <thead class="table-backgroupColor">
+            <tr >
+                <th scope="col" class="admin-border-th-stt">STT</th>
+                <th scope="col" class="admin-border-th-img">HÌNH ẢNH</th>
+                <th scope="col" class="admin-border-th-name">HỌ TÊN</th>
+                <th scope="col" class="admin-border-th-email">EMAIL</th>
+                <th scope="col" class="admin-border-th-gender">GIỚI TÍNH</th>
+                <th scope="col" class="admin-border-th-birthday">NGÀY SINH</th>
+                <th scope="col" class="admin-border-th-phone">SỐ ĐIỆN THOẠI</th>
+                <th scope="col" class="admin-border-th-address">ĐỊA CHỈ</th>
+                <th scope="col" class="admin-border-th-function">CHỨC NĂNG</th>
             </tr>
         </thead>
         <tbody>
@@ -62,15 +61,18 @@
             @endphp
             @foreach($admin as $ad)
             <tr>
-                <td class="">{{ $stt++ }}</td>
-                <td class="">{{ $ad->last_name }}</td>
-                <td class="">{{ $ad->first_name }}</td>
-                <td class="">{{ $ad->email }}</td>
-                <td class="">{{ $ad->gender == 0 ? 'Nam' : 'Nữ' }}</td>
-                <td class="">{{ $ad->birthday ? \Carbon\Carbon::parse($ad->birthday)->format('d-m-Y') : 'N/A' }}</td>
-                <td class="">{{ $ad->phone }}</td>
-                <td class="">{{ $ad->is_user_admin == 0 ? 'User' : 'Admin' }}</td>
-                <td class="">{{ $ad->address }}</td>
+                <td class="admin-border-td-stt">{{ $stt++ }}</td>
+                <td class="admin-border-td-img">
+                    @foreach ($ad->images as $image)
+                    <img class="img-admin" src="{{ asset($image->path) }}" alt="{{ $ad->last_name.' '.$ad->first_name}}" >
+                    @endforeach
+                </td>
+                <td class="admin-border-td-name">{{ $ad->last_name }} {{ $ad->first_name}}</td>
+                <td class="admin-border-td-email">{{ $ad->email }}</td>
+                <td class="admin-border-td-gender">{{ $ad->gender == 0 ? 'Nam' : 'Nữ' }}</td>
+                <td class="admin-border-td-birthday">{{ $ad->birthday ? \Carbon\Carbon::parse($ad->birthday)->format('d-m-Y') : 'N/A' }}</td>
+                <td class="admin-border-td-phone">{{ $ad->phone }}</td>
+                <td class="admin-border-td-address">{{ $ad->address }}</td>
                 <td class="admin-border-td-function">
                     <div class="edit-delete-admin">
                         <form action="" class="edit">
@@ -91,22 +93,30 @@
             @endforeach
         </tbody>
        </table>
+       <div class="pagination-margin-admin">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination custom-pagination">
+                {{ $admin->appends(['admin_page' => request('admin_page')])->links() }}
+            </ul>
+        </nav>
+       </div>
 
 
 
-       <table class="table Admin">
+
+       <table class="table User">
+        <p class="font-p-user">DANH SÁCH TÀI KHOẢN USER</p>
         <thead class="table-backgroupColor">
             <tr>
-                <th scope="col" class="">STT</th>
-                <th scope="col" class="">HỌ</th>
-                <th scope="col" class="">TÊN</th>
-                <th scope="col" class="">EMAIL</th>
-                <th scope="col" class="">GIỚI TÍNH</th>
-                <th scope="col" class="">NGÀY SINH</th>
-                <th scope="col" class="">SỐ ĐIỆN THOẠI</th>
-                <th scope="col" class="">LOẠI TÀI KHOẢN</th>
-                <th scope="col" class="">ĐIA CHỈ</th>
-                <th scope="col" class="">CHỨC NĂNG</th>
+                <th scope="col" class="user-border-th-stt">STT</th>
+                <th scope="col" class="user-border-th-img">HÌNH ẢNH</th>
+                <th scope="col" class="user-border-th-name">HỌ TÊN</th>
+                <th scope="col" class="user-border-th-email">EMAIL</th>
+                <th scope="col" class="user-border-th-gender">GIỚI TÍNH</th>
+                <th scope="col" class="user-border-th-birthday">NGÀY SINH</th>
+                <th scope="col" class="user-border-th-phone">SỐ ĐIỆN THOẠI</th>
+                <th scope="col" class="user-border-th-address">ĐIA CHỈ</th>
+                <th scope="col" class="user-border-th-function">CHỨC NĂNG</th>
             </tr>
         </thead>
         <tbody>
@@ -115,17 +125,20 @@
             @endphp
             @foreach($user as $usr)
             <tr>
-                <td class="">{{ $stt++ }}</td>
-                <td class="">{{ $usr->last_name }}</td>
-                <td class="">{{ $usr->first_name }}</td>
-                <td class="">{{ $usr->email }}</td>
-                <td class="">{{ $usr->gender == 0 ? 'Nam' : 'Nữ'}}</td>
-                <td class="">{{ $usr->birthday ? \Carbon\Carbon::parse($ad->birthday)->format('d-m-Y') : 'N/A' }}</td>
-                <td class="">{{ $usr->phone }}</td>
-                <td class="">{{ $usr->is_user_admin == 0 ? 'User' : 'Admin'}}</td>
-                <td class="">{{ $usr->address }}</td>
-                <td class="admin-border-td-function">
-                    <div class="edit-delete-admin">
+                <td class="user-border-td-stt">{{ $stt++ }}</td>
+                <td class="user-border-td-img">
+                    @foreach ($usr->images as $image)
+                    <img class="img-user" src="{{ asset($image->path) }}" alt="{{ $usr->last_name.' '.$usr->first_name}}" >
+                    @endforeach
+                </td>
+                <td class="user-border-td-name">{{ $usr->last_name }} {{$usr->first_name}}</td>
+                <td class="user-border-td-email">{{ $usr->email }}</td>
+                <td class="user-border-td-gender">{{ $usr->gender == 0 ? 'Nam' : 'Nữ'}}</td>
+                <td class="user-border-td-birthday">{{ $usr->birthday ? \Carbon\Carbon::parse($ad->birthday)->format('d-m-Y') : 'N/A' }}</td>
+                <td class="user-border-td-phone">{{ $usr->phone }}</td>
+                <td class="user-border-td-address">{{ $usr->address }}</td>
+                <td class="user-border-td-function">
+                    <div class="edit-delete-user">
                         <form action="" class="edit">
                             <button type="button" class="btn btn-warning">
                                 <i class="bi bi-pencil-square"></i>
@@ -144,11 +157,22 @@
             @endforeach
         </tbody>
        </table>
+       <div class="pagination-margin-admin">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination custom-pagination">
+                {{ $user->appends(['user_page' => request('user_page')])->links() }}
+            </ul>
+        </nav>
+       </div>
+
 
     @endsection
 
     @section('footer')
         @parent
     @endsection
+
+
+    <script src="{{ asset('js/user-image.js') }}"></script>
 </body>
 </html>

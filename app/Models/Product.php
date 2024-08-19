@@ -9,19 +9,32 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $guarded=[];
+    protected $guarded=[
 
+    ];
+    public function images()
+    {
+       return $this->hasMany(Image::class, 'ProductID', 'id');
+    }
     public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class,'CategoryID','id');
     }
 
     public function brand()
     {
-        return $this->belongsTo(Brands::class);
+        return $this->belongsTo(Brands::class,'BrandID','id');
     }
-    public function filters()
+    public function product_fillter()
     {
-        return $this->hasMany(Fillter::class);
+        return $this->hasMany(Product_Fillter::class,'ProductID','id');
     }
+
+    public function fillters()
+    {
+        return $this->belongsToMany(Fillter::class, 'product_fillter');
+    }
+
+
+
 }

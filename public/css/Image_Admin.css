@@ -5,32 +5,57 @@
     height: 70px;
     width: 110%;
     border: 1px solid white;
+    font-size: 15px;
     border-radius: 15px;
     background-color: white;
     box-shadow: 0 0 1.5px 1.5px #bf80ff;
 }
-
-.btn.btn-search,
-.btn.btn-search:hover
-{
-    background-color: #8c00ff;
-    color: white;
-
-}
-
-.navbar-brand.name{
-    color: #000000;
-    font-weight: 900;
-    font-size: 15px;
-}
-
-.bi.bi-motherboard.icon-brand{
-    background-color: #8c00ff;
-    color: rgb(255, 255, 255);
-    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
-}
+.nav-link.nav-font-imgproduct{ font-weight: 900; color: #000000; } .nav-link.nav-font-imgproduct:hover{ font-weight: 900; color: #000000; }
+.btn.btn-search,.btn.btn-search:hover { background-color: #8c00ff; color: white; }
+.navbar-brand.name{ color: #000000; font-weight: 900; font-size: 15px;}
+.bi.bi-motherboard.icon-brand{ background-color: #8c00ff; color: rgb(255, 255, 255); box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3); }
 /*Thanh điều hướng*/
-/*Bảng hình ảnh loại sản phẩm*/
+
+.Admin-User{ display: flex;}
+.font-admin-user{ display: flex;}
+.font-p-admin { font-size: 15px; font-weight: 900; margin-left: 15%;}
+.font-p-user{ font-size: 15px; font-weight: 900;  margin-left: 33%; }
+/*Bảng hình ảnh Admin*/
+.table.Admin{
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 3%;
+    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
+    font-family: 'Roboto', sans-serif;
+ }
+/*Bảng hình ảnh Admin*/
+/*Bảng hình ảnh User*/
+.table.User{
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 3%;
+    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
+    font-family: 'Roboto', sans-serif;
+ }
+ /*Bảng hình ảnh User*/
+.font-category-brand{ display: flex; margin-top: 30px;}
+.font-p-category { font-size: 15px; font-weight: 900; margin-left: 10%;}
+.font-p-brand{ font-size: 15px; font-weight: 900;  margin-left: 30%; }
+
 .table.Category{
     text-align: center;
     font-size: 13px;
@@ -45,45 +70,18 @@
     box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
     font-family: 'Roboto', sans-serif;
  }
- .table-backgroupColor{
-    font-size: 13px;
-    --bs-table-color: white;
-    --bs-table-bg:  #8c00ff ;
-
-}
+.table-backgroupColor{ font-size: 13px; --bs-table-color: white; --bs-table-bg:  #8c00ff ;}
 /*Bảng hình ảnh loại sản phẩm*/
 /*th-td-2 bảng*/
-.category-border-th-stt,
-.category-border-th-img,
-.category-border-th-nameParent,
-.brand-border-th-stt,
-.brand-border-th-img,
-.brand-border-th-nameBrand
-{
-   border-right:  1px solid white;
-}
-
-.category-border-td-stt,.category-border-td-nameParent,.category-border-td-img,.category-border-td-function,
-.brand-border-td-stt,.brand-border-td-nameBrand,.brand-border-td-img,.brand-border-td-function
-{
-    border-right: 1px solid #f1e6ec;
-    border-bottom: 1px solid #f1e6ec;
-}
+.category-border-th-stt,.category-border-th-img,.category-border-th-nameParent,.brand-border-th-stt,.brand-border-th-img,.brand-border-th-nameBrand
+{ border-right:  1px solid white;}
+.category-border-td-stt,.category-border-td-nameParent,.category-border-td-img,.category-border-td-function,.brand-border-td-stt,.brand-border-td-nameBrand,.brand-border-td-img,.brand-border-td-function
+{ border-right: 1px solid #f1e6ec; border-bottom: 1px solid #f1e6ec; vertical-align: middle;}
 /*th-td-2 bảng*/
 /*nút*/
-.edit-delete-category
-{
-    display: flex;
-    margin-left: 30%;
-}
-.edit-delete-brand{
-    display: flex;
-    margin-left: 30%;
-}
-
-.edit{
-    margin-right: 4px;
-}
+.edit-delete-category {display: flex; margin-left: 30%; }
+.edit-delete-brand {display: flex ; margin-left: 30%; }
+.edit { margin-right: 4px; }
 /*nút*/
 /*Bảng hình ảnh hãng sản xuất*/
 .table.Brand{
@@ -102,44 +100,15 @@
  }
 /*Bảng hình ảnh hãng sản xuất*/
 /*Phân trang*/
-.Category-Brand{
-    display: flex;
-}
-
-.pagination-category-brand{
-    display: flex;
-   }
-   /*Phân trang loại sản phẩm cha */
-   .pagination-margin-category{
-       margin-left: 5%;
-
-   }
-
-   /*Phân trang loại sản phẩm cha */
-   .pagination-margin-brand{
-      margin-left: 50%;
-     }
-     .custom-pagination .page-item .page-link {
-        background-color: #8c00ff; /* Màu tím chính */
-        border-color: #8c00ff;
-        --bs-pagination-font-size: 0.8rem;
-        color: white;
-    }
-
-    .custom-pagination .page-item.active .page-link {
-        background-color: #6600bf; /* Màu tím đậm hơn cho trạng thái active */
-        border-color: #6600bf;
-    }
-
-    .custom-pagination .page-item .page-link:hover {
-        background-color: #a64dff; /* Màu tím nhạt hơn khi hover */
-        border-color: #a64dff;
-    }
-
-    .custom-pagination .page-item.disabled .page-link {
-        background-color: #bf80ff; /* Màu tím nhạt hơn cho trạng thái disabled */
-        border-color: #bf80ff;
-        color: #f2e6ff; /* Màu chữ nhạt hơn cho trạng thái disabled */
-    }
+.Category-Brand{ display: flex; }
+.pagination-category-brand{ display: flex; }
+/*Phân trang loại sản phẩm cha */
+.pagination-margin-category{ margin-left: 5%;}
+/*Phân trang loại sản phẩm cha */
+.pagination-margin-brand{ margin-left: 50%;}
+.custom-pagination .page-item .page-link { background-color: #8c00ff; border-color: #8c00ff;--bs-pagination-font-size: 0.8rem; color: white; }
+.custom-pagination .page-item.active .page-link { background-color: #6600bf; border-color: #6600bf; }
+.custom-pagination .page-item .page-link:hover {background-color: #a64dff; border-color: #a64dff;}
+.custom-pagination .page-item.disabled .page-link { background-color: #bf80ff; border-color: #bf80ff;color: #f2e6ff; }
 /*Phân trang*/
 
