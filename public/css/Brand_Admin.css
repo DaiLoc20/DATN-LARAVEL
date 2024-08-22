@@ -14,7 +14,29 @@
 .navbar-brand.name{ color: #000000; font-weight: 900; font-size: 15px;}
 .bi.bi-window.icon-category{ background-color: #8c00ff; color: rgb(255, 255, 255); box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3); }
 /*Thanh điều hướng*/
+/*Bảng Thêm Hãng Sản Xuất*/
 
+#addBrandForm{
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
+
+form label {
+    display: inline-block;
+    width: 100px;
+}
+
+form input[type="text"], form input[type="number"], form textarea {
+    width: 300px;
+    padding: 5px;
+}
+
+form textarea {
+    height: 100px;
+}
+/*Bảng Thêm Hãng Sản Xuất*/
 
 /*Bảng Danh Sách*/
 .font-p-brand{ font-size: 15px; margin-left: 40%; font-weight: 900;}
