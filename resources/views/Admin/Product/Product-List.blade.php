@@ -84,6 +84,14 @@
         </tbody>
        </table>
 
+       <div class="pagination-product">
+       <div class="pagination-margin-product">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination custom-pagination">
+                {{ $products->appends(['products_page' => request('products_page')])->links() }}
+            </ul>
+        </nav>
+       </div>
 
     @endsection
 

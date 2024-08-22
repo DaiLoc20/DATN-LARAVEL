@@ -45,3 +45,10 @@
 .edit-delete-product { display: flex;margin-left: 30%; }
 .edit { margin-right: 4px; }
 /*nút*/
+
+/*Phân trang của sản phẩm*/
+.pagination-margin-product { margin-left: 49.5%; margin-top: 3%; }
+.custom-pagination .page-item .page-link { background-color: #8c00ff; border-color: #8c00ff;--bs-pagination-font-size: 0.8rem; color: white; }
+.custom-pagination .page-item.active .page-link { background-color: #6600bf; border-color: #6600bf; }
+.custom-pagination .page-item .page-link:hover {background-color: #a64dff; border-color: #a64dff;}
+.custom-pagination .page-item.disabled .page-link { background-color: #bf80ff; border-color: #bf80ff;color: #f2e6ff;}
