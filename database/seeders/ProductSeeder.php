@@ -13,7 +13,7 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-      /*Product::create([
+      Product::create([
             'name' => 'PC Gaming STAR CHICKEN MINI i3 12100F| GT 1030 2GB, Intel',
         'price' => 6990000,
         'CategoryID' => 1
@@ -80,7 +80,6 @@ class ProductSeeder extends Seeder
             'price' => 26100000,
             'CategoryID' => 1
         ]);
-
         Product::create([
             'name' => 'PC AMD SUPER GAMING Ryzen7 5700X3D| RTX 4060 8GB , AMD',
             'price' => 22890000,
@@ -1266,6 +1265,6 @@ class ProductSeeder extends Seeder
             'price' => 229000,
             'CategoryID' => 16
         ]);
-        */
+
     }
 }
