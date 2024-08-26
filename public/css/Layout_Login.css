@@ -21,7 +21,7 @@
   }
 .title.login {
   font-size: 20px;
-  color:#8c00ff;
+  color:#3368fb;
   font-weight: 600;
   letter-spacing: -1px;
   position: relative;
@@ -36,9 +36,9 @@
   width: 16px;
   border-radius: 50%;
   left: 0px;
-  background-color: #8c00ff;
+  background-color: #3368fb;
 }
-.title.login::before { width: 18px; height: 18px; background-color: #8c00ff;}
+.title.login::before { width: 18px; height: 18px; background-color: #3368fb;}
 .title.login::after { width: 18px; height: 18px; animation: pulse 1s linear infinite;}
 /*Form Đăng Ký*/
 .form.register  {
@@ -55,7 +55,7 @@
 }
 .title {
   font-size: 20px;
-  color: #8c00ff;
+  color: #3368fb;
   font-weight: 600;
   letter-spacing: -1px;
   position: relative;
@@ -70,9 +70,9 @@
   width: 16px;
   border-radius: 50%;
   left: 0px;
-  background-color: #8c00ff;
+  background-color: #3368fb;
 }
-.title::before { width: 18px; height: 18px;background-color: #8c00ff; }
+.title::before { width: 18px; height: 18px;background-color: #3368fb; }
 .title::after { width: 18px; height: 18px; animation: pulse 1s linear infinite; }
 .flex { display: flex; width: 100%; gap: 6px;}
 .form label { position: relative; }
@@ -98,14 +98,14 @@
 .submit {
   border: none;
   outline: none;
-  background-color: #8c00ff;
+  background-color: #3368fb;
   padding: 10px;
   border-radius: 10px;
   color: #fff;
   font-size: 16px;
   transform: .3s ease;
 }
-.submit:hover { background-color: #8c00ff; cursor: pointer; }
+.submit:hover { background-color: #3368fb; cursor: pointer; }
 @keyframes pulse {
     from { transform: scale(0.9); opacity: 1; }
     to { transform: scale(1.8); opacity: 0; }

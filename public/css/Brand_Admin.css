@@ -7,39 +7,40 @@
     border: 1px solid white;
     border-radius: 15px;
     background-color: white;
-    box-shadow: 0 0 1.5px 1.5px #bf80ff;
+    box-shadow: 0 0 1.5px 1.5px #3368fb;
 }
-
-.btn.btn-search,.btn.btn-search:hover{ background-color: #8c00ff; color: white; }
 .navbar-brand.name{ color: #000000; font-weight: 900; font-size: 15px;}
-.bi.bi-window.icon-category{ background-color: #8c00ff; color: rgb(255, 255, 255); box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3); }
+.breadcrumb-item,.breadcrumb-item.active { font-weight: bold; font-size: 12px;}
+.btn.btn-search{ background-color: rgb(13 110 253); color: white;}
+.btn.btn-search:hover{ background-color: rgb(2, 87, 214); color: white;}
+.form-control.me-2.font-search{ font-weight: 900; }
+.d-flex.form-search { margin-right: -6%;}
 /*Thanh điều hướng*/
-/*Bảng Thêm Hãng Sản Xuất*/
 
-#addBrandForm{
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-top: 20px;
-    background-color: #f9f9f9;
-}
+/*Nút Thêm , Sắp Xếp Tăng-Giảm Dần*/
+.navbar.nav-function{ display: flex; align-items: center; }
+.button-group.group-function{ display: flex; align-items: center; margin-left: 65px; }
+.btn.btn-primary.plus-brand{ margin-bottom: 10px; margin-top: 10px; border-radius: 5px ; width: 150px; height: 35px;
+                  font-weight: 900; font-size: 14px ; vertical-align: middle; }
+.btn.btn-primary.show-all-brand { width: 50px; height: 35px;  margin-right: 5px;vertical-align: middle;}
+.btn-asc{ background-color: #198754; border-radius: 5px; border: 2px solid #198754;
+          width: 50px; height: 35px;margin-left: 5px; }
+.btn-desc{ background-color: #198754;border-radius: 5px; border: 2px solid #198754;
+           width: 50px; height: 35px;margin-left: 5px; }
+.btn.btn-success.show-new-brand { font-weight: 900; font-size: 14px; margin-left: 5px;}
+.btn.btn-warning.show-edit-brand { font-weight: 900; font-size: 14px; margin-left: 5px; }
 
-form label {
-    display: inline-block;
-    width: 100px;
-}
-
-form input[type="text"], form input[type="number"], form textarea {
-    width: 300px;
-    padding: 5px;
-}
-
-form textarea {
-    height: 100px;
-}
-/*Bảng Thêm Hãng Sản Xuất*/
-
+.bi.bi-plus-square-fill, .bi.bi-arrow-clockwise{ margin-top: -2px;}
+.bi.bi-sort-alpha-down, .bi.bi-sort-alpha-up-alt,.bi.bi-arrow-clockwise{ color: white; }
+/*Nút Sắp Xếp Tăng-Giảm Dần*/
 /*Bảng Danh Sách*/
-.font-p-brand{ font-size: 15px; margin-left: 40%; font-weight: 900;}
+.alert.alert-info{ font-weight: 900; margin-left: 65px;
+                   width: 1110px; height: 450px;
+                   background-color: #e8e8e8; color: #000000;
+                   box-shadow: 0 0 1px 1px #e8e8e8; border: 1px solid #e8e8e8
+                   ;
+                }
+.font-p-brand{ font-size: 17px; margin-left: 40%; font-weight: 900; }
 .table{
    text-align: center;
    font-size: 13px;
@@ -52,72 +53,56 @@ form textarea {
    box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
    font-family: 'Roboto', sans-serif;
 }
-.table-backgroupColor{
-    --bs-table-color: #fff;
-    --bs-table-bg:  #8c00ff ;
-    font-weight: 900;
-}
+.table-backgroupColor{ --bs-table-color: #fff;--bs-table-bg:  #3368fb ; font-weight: 900;}
 /*th*/
-.border-th-stt{
-    border-right: 1px solid;
-    width: 5%;
-}
-.border-th-name{
-    border-right: 1px solid;
-    width: 40%;
-}
-.border-th-img{
-    border-right: 1px solid;
-    width: 20%;
-}
-
+.border-th-stt{ border-right: 1px solid; width: 5%; }
+.border-th-name{ border-right: 1px solid; width: 40%; }
+.border-th-img{ border-right: 1px solid; width: 20% }
 /*th*/
 /*td*/
 .border-width-STT,.border-width-Name,.border-width-Img{border-right: 1px solid #f1e6ec;  vertical-align: middle;}
-.border-width-Function{
-    width: 15%;
-    vertical-align: middle;
-}
-
-.img-brand{
-    width: 70px;
-}
+.border-width-Function{ width: 15%;  vertical-align: middle;}
+.img-brand{ width: 70px;}
 /*td*/
-
 /*nút*/
-.edit-delete{
-    display: flex;
-    margin-left: 30%;
-}
-
-.edit{
-    margin-right: 4px;
-}
+.edit-delete{ display: flex; margin-left: 30%; }
+.edit{ margin-right: 4px; }
 /*nút*/
-
+#flash-message { transition: opacity 0.5s ease-out; }
+#flash-message.hide { opacity: 0; }
+.message-success-destroy-brand{
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #00914d;
+    border: 1px solid #00914d;
+    border-radius: 10px;
+    margin-top: -31px;
+    margin-left: 41%;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    box-shadow: 0 0 1px 1px #00914d;
+}
+.message-error-destroy-brand{
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #00914d;
+    border: 1px solid #00914d;
+    border-radius: 10px;
+    margin-top: -31px;
+    margin-left: 41%;
+    width: 369px;
+    height: 50px;
+    padding: 10px;
+    box-shadow: 0 0 1px 1px #00914d;
+}
 /*phân trang*/
-.pagination-margin{
-    margin-left: 50%;
-}
-.custom-pagination .page-item .page-link {
-    background-color: #8c00ff; /* Màu tím chính */
-    border-color: #8c00ff;
-    --bs-pagination-font-size: 0.8rem;
-    color: white;
-}
-
-.custom-pagination .page-item.active .page-link {
-    background-color: #6600bf; /* Màu tím đậm hơn cho trạng thái active */
-    border-color: #6600bf;
-}
-
-.custom-pagination .page-item .page-link:hover {
-    background-color: #a64dff; /* Màu tím nhạt hơn khi hover */
-    border-color: #a64dff;
-}
-
-.custom-pagination .page-item.disabled .page-link {
-    background-color: #bf80ff; /* Màu tím nhạt hơn cho trạng thái disabled */
-    border-color: #bf80ff;
-    color: #f2e6ff; /* Màu chữ nhạt hơn cho trạng thái disabled */
-}
+.pagination-margin{ margin-left: 45%; }
+.custom-pagination .page-item .page-link {background-color: #3368fb; border-color: #3368fb;--bs-pagination-font-size: 0.8rem; color: white;}
+.custom-pagination .page-item.active .page-link { background-color: #1e4cd1; border-color: #1e4cd1; }
+.custom-pagination .page-item .page-link:hover { background-color: #5684fc;  border-color: #5684fc;}
+.custom-pagination .page-item.disabled .page-link {background-color: #a3b8fd; border-color: #a3b8fd; color: #e6ecff; }

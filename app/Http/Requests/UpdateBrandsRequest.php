@@ -11,7 +11,7 @@ class UpdateBrandsRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,8 +21,16 @@ class UpdateBrandsRequest extends FormRequest
      */
     public function rules(): array
     {
+        return [ 'name' => 'required|string|max:50|unique:brands,name',  ];
+    }
+    public function messages(): array
+    {
         return [
-            //
+            'name.required' => 'Tên hãng sản xuất là bắt buộc.',
+            'name.string' => 'Tên hãng sản xuất phải là một chuỗi.',
+            'name.max' => 'Tên hãng sản xuất không được vượt quá 50 ký tự.',
+            'name.unique' => 'Tên hãng sản xuất đã tồn tại.',
+
         ];
     }
 }

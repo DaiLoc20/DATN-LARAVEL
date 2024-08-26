@@ -1,0 +1,57 @@
+/*Thanh điều hướng*/
+.navbar.navbar-expand-lg{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 70px;
+    width: 110%;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 0 1.5px 1.5px #3368fb;
+}
+.navbar-brand.name{ color: #000000; font-weight: 900; font-size: 15px;}
+.breadcrumb-item,.breadcrumb-item.active { font-weight: bold; font-size: 12px; }
+
+/*Thanh điều hướng*/
+
+/*Bảng Thêm Hãng Sản Xuất*/
+.name-Brand{ font-weight: 900; font-size: 15px; vertical-align: middle;}
+.form-control.input-Brand{width: 50% ; margin-top: 5px;}
+.btn.btn-success.save-Brand,.btn.btn-danger.close-Brand{ margin-top: 10px; }
+.form-BrandPlus{ border: 1px solid #bf80ff;border-radius: 10px; width: 50%; padding: 20px; box-shadow: 0 0 1px 1px #bf80ff;}
+/*Bảng Thêm Hãng Sản Xuất*/
+#flash-message { transition: opacity 0.5s ease-out; }
+#flash-message.hide { opacity: 0; }
+.message-success-store-brand{
+    font-weight: 600; font-size: 15px; text-align: center; color: #ffffff;
+    background-color: #00914d;
+    border: 1px solid #00914d; border-radius: 10px;
+    margin-top: 10px;
+    width: 270px; height: 50px; padding: 10px;
+    box-shadow:0  0 1px 1px #00914d;
+}
+.message-error-store-brand{
+    font-weight: 600; font-size: 15px; text-align: center; color: #ffffff;
+    background-color: red;
+    border: 1px solid red; border-radius: 10px;
+    margin-top: 10px;
+    width: 300px; height: 50px; padding: 10px;
+    box-shadow:0  0 1px 1px red;
+}
+.message-success-update-brand{
+    font-weight: 600; font-size: 15px; text-align: center; color: #ffffff;
+    background-color: #00914d;
+    border: 1px solid #00914d; border-radius: 10px;
+    margin-top: 10px;
+    width: 270px; height: 50px; padding: 10px;
+    box-shadow:0  0 1px 1px #00914d;
+}
+.message-error-update-brand{
+    font-weight: 600; font-size: 15px; text-align: center; color: #ffffff;
+    background-color: red;
+    border: 1px solid red; border-radius: 10px;
+    margin-top: 10px;
+    width: 300px; height: 50px; padding: 10px;
+    box-shadow:0  0 1px 1px red;
+}
+

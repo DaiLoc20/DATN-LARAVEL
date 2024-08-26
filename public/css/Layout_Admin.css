@@ -16,7 +16,7 @@
     box-shadow:0  0 1px 1px #00914d;
 }
 .logout-button{ border: none;  background-color: white; font-weight: 900; margin: 0px -6px; }
-.list-group-item:hover .logout-button{ color: white; background-color: #8c00ff; }
+.list-group-item:hover .logout-button{ color: white; background-color: #3368fb; }
 /*Thông báo đăng nhập và đăng xuất*/
 /*Hình ảnh */
 .list-group-item-image-user{
@@ -24,11 +24,11 @@
     margin-top: 10px; margin-left: 15px; margin-bottom: 10px;
     border-radius: 20px; border-bottom: 2px;
     height: 150px; width: 200px;
-    background-color: #8c00ff;
+    background-color: #3368fb;
 }
 
 .img-thumbnail-user{ border-radius: 15px; margin-top: 15px; margin-left: 50px; width: 100px;height: 100px; }
-.font-last-first_name { color: white; font-weight: 900; margin-left: 30px; margin-top: 5px; margin-bottom: 5px;}
+.font-last-first_name { color: rgb(255, 255, 255); font-weight: 900; margin-left: 30px; margin-top: 5px; margin-bottom: 5px;}
 /*Hình ảnh */
 /*Danh Sách*/
 .col-3.col3-list-group{
@@ -53,8 +53,8 @@
 .list-group-item:hover{
     border-radius: 10px;
     width: 100%;
-    background-color: #8c00ff;
     color: white;
+    background-color: #3368fb;
     text-align: center;
     font-size: 14px;
     font-weight: 800;
@@ -70,8 +70,8 @@
 .list-group-item:hover .bi.bi-clipboard-pulse,
 .list-group-item:hover .bi.bi-box-arrow-right
 {
+    color: #3368fb;
     background-color: #ffffff;
-    color: #8c00ff;
 }
 .bi.bi-houses,
 .bi.bi-person-badge,
@@ -89,15 +89,13 @@
     margin-right: 4px;
     border-radius: 5px;
     color: white;
-    background-color: #8c00ff;
+    background-color: #3368fb;
     transform: scale(1.2);
     box-shadow: 0 4px 8px rgba(167, 167, 167, 0.3);
 }
-
 /*Danh Sách*/
 
 /*Content*/
-
 .col-9{
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
@@ -105,7 +103,4 @@
     margin-top: 4px;
     margin-bottom: 3px;
 }
-
-
-
 /*Content*/

@@ -7,13 +7,13 @@
     border: 1px solid white;
     border-radius: 15px;
     background-color: white;
-    box-shadow: 0 0 1.5px 1.5px #bf80ff;
+    box-shadow: 0 0 1.5px 1.5px #3368fb;
 }
 
 .btn.btn-search,.btn.btn-search:hover { background-color: #8c00ff; color: white;}
 .navbar-brand.name{ color: #000000; font-weight: 900; font-size: 15px; }
 .bi.bi-motherboard.icon-brand{
-    background-color: #8c00ff;
+    background-color: #3368fb;
     color: rgb(255, 255, 255);
     box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3);
 }
@@ -40,7 +40,7 @@
 .product-border-td-stt,.product-border-td-Product,.product-border-td-Price,.product-border-td-Category,.product-border-td-Brand,.product-border-td-function
 { border-right: 1px solid #f1e6ec; border-bottom: 1px solid #f1e6ec; vertical-align: middle; }
 /*th-td*/
-.table-backgroupColor{font-size: 13px;--bs-table-color: white;--bs-table-bg:  #8c00ff ;}
+.table-backgroupColor{font-size: 13px;--bs-table-color: white;--bs-table-bg:  #3368fb ;}
 /*nút*/
 .edit-delete-product { display: flex;margin-left: 30%; }
 .edit { margin-right: 4px; }
@@ -48,7 +48,7 @@
 
 /*Phân trang của sản phẩm*/
 .pagination-margin-product { margin-left: 49.5%; margin-top: 3%; }
-.custom-pagination .page-item .page-link { background-color: #8c00ff; border-color: #8c00ff;--bs-pagination-font-size: 0.8rem; color: white; }
-.custom-pagination .page-item.active .page-link { background-color: #6600bf; border-color: #6600bf; }
-.custom-pagination .page-item .page-link:hover {background-color: #a64dff; border-color: #a64dff;}
-.custom-pagination .page-item.disabled .page-link { background-color: #bf80ff; border-color: #bf80ff;color: #f2e6ff;}
+.custom-pagination .page-item .page-link {background-color: #3368fb; border-color: #3368fb;--bs-pagination-font-size: 0.8rem; color: white;}
+.custom-pagination .page-item.active .page-link { background-color: #1e4cd1; border-color: #1e4cd1; }
+.custom-pagination .page-item .page-link:hover { background-color: #5684fc;  border-color: #5684fc;}
+.custom-pagination .page-item.disabled .page-link {background-color: #a3b8fd; border-color: #a3b8fd; color: #e6ecff; }

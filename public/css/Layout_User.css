@@ -13,8 +13,8 @@
     background-color: rgb(255, 255, 255);
 }
 .nav-login-card{ display: flex; font-weight: 900;}
-.nav-link.nav-font-login { margin-right: 30px; color: #8c00ff;}
-.nav-link.nav-font-card { margin-right: 20px; color: #8c00ff;}
+.nav-link.nav-font-login { margin-right: 30px; color: #3368fb;}
+.nav-link.nav-font-card { margin-right: 20px; color: #3368fb;}
 .message-success,.message-failure{
     font-weight: 600; font-size: 15px; text-align: center; color: #00914d;
     border: 1px solid #00914d; border-radius: 10px;

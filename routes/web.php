@@ -19,10 +19,17 @@ Route::get('/Admin/Fillter/FillterList', [FillterController::class, 'index_fillt
 Route::get('/Admin/Category/CategoryList', [CategoryController::class, 'index_category_admin']);
 
 
-/*Thêm hãng sản xuất*/
+/*Thêm-Xoá-Sửa hãng sản xuất*/
 Route::get('/Admin/Brand/BrandList', [BrandsController::class, 'index_brand_admin'])->name('admin.brands.list');
-Route::post('/Admin/Brand/BrandList', [BrandsController::class, 'store'])->name('admin.brands.store');
-/*Thêm hãng sản xuất*/
+Route::get('/Admin/Brand/BrandPlus', [BrandsController::class, 'create_brand'])->name('admin.brands.plus');
+Route::post('/Admin/Brand/BrandPlus', [BrandsController::class, 'store'])->name('admin.brands.store');
+
+Route::get('/Admin/Brand/{brands}/BrandEdit', [BrandsController::class, 'edit_brand'])->name('admin.brands.edit');
+Route::put('/Admin/Brand/{brands}/BrandEdit', [BrandsController::class, 'update'])->name('admin.brands.update');
+
+Route::get('/Admin/Brand/{brands}/BrandDelete', [BrandsController::class, 'delete_brand'])->name('admin.brands.delete');
+Route::delete('/Admin/Brand/{brands}/BrandDelete', [BrandsController::class, 'destroy'])->name('admin.brands.delete');
+/*Thêm-Xoá-Sửa hãng sản xuất*/
 
 
 
