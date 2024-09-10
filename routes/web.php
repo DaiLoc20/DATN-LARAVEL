@@ -15,8 +15,13 @@ use App\Http\Controllers\ImageController;
 Route::get('/Admin/Fillter/FillterList/FillterProduct', [Product_FillterController::class, 'index_product_fillter_admin']);
 Route::get('/Admin/Image/ImageList', [ImageController::class, 'index_image_admin']);
 Route::get('/Admin/Product/ProductList', [ProductController::class, 'index_product_admin']);
-Route::get('/Admin/Fillter/FillterList', [FillterController::class, 'index_fillter_admin']);
-Route::get('/Admin/Category/CategoryList', [CategoryController::class, 'index_category_admin']);
+Route::get('/Admin/Fillter/FillterList', [FillterController::class, 'index_fillter_admin'])->name('admin.fillter.list');
+/*Hình Ảnh*/
+Route::get('/Admin/Image/ImageList', [ImageController::class, 'index_image_admin'])->name('admin.image.list');
+Route::get('/Admin/Image/ImageBrandList', [ImageController::class, 'index_image_brand_admin'])->name('admin.image.brand.list');
+Route::get('/Admin/Image/ImageCategoryList', [ImageController::class, 'index_image_category_admin'])->name('admin.image.category.list');
+Route::get('/Admin/Image/ImageUserList', [ImageController::class, 'index_image_user_admin'])->name('admin.image.user.list');
+/*Hình Ảnh*/
 
 
 /*Thêm-Xoá-Sửa hãng sản xuất*/
@@ -31,9 +36,33 @@ Route::get('/Admin/Brand/{brands}/BrandDelete', [BrandsController::class, 'delet
 Route::delete('/Admin/Brand/{brands}/BrandDelete', [BrandsController::class, 'destroy'])->name('admin.brands.delete');
 /*Thêm-Xoá-Sửa hãng sản xuất*/
 
+/*Thêm-Xoá-Sửa loại sản phẩm*/
+Route::get('/Admin/Category/CategoryList', [CategoryController::class, 'index_category_admin'])->name('admin.category.list');
+Route::get('/Admin/Category/CategoryPlus', [CategoryController::class, 'create_category'])->name('admin.category.plus');
+Route::post('/Admin/Category/CategoryPlus', [CategoryController::class, 'store'])->name('admin.category.store');
+
+Route::get('/Admin/Category/{id}/Edit', [CategoryController::class, 'edit_category'])->name('admin.category.edit');
+Route::put('/Admin/Category/{category}/Edit', [CategoryController::class, 'update'])->name('admin.category.update');
+
+Route::delete('/Admin/Category/{category}/Delete', [CategoryController::class, 'destroy'])->name('admin.category.destroy');
+/*Thêm-Xoá-Sửa loại sản phẩm*/
 
 
-Route::get('/Admin/User/UserList', [UserController::class, 'index_user_admin']);
+
+/*Thêm-Xoá-Sửa Admin*/
+Route::get('/Admin/User/UserList', [UserController::class, 'index_user_admin'])->name('admin.user.list');
+Route::get('/Admin/User/UserPlus', [UserController::class, 'create_user'])->name('admin.user.plus');
+Route::post('/Admin/User/UserPlus', [UserController::class, 'store'])->name('admin.user.store');
+
+Route::get('/Admin/User/{id}/UserEdit', [UserController::class, 'edit_user'])->name('admin.user.edit');
+Route::put('/Admin/User/{user}/UserEdit', [UserController::class, 'update'])->name('admin.user.update');
+
+Route::delete('/Admin/User/{user}/Delete', [UserController::class, 'destroy'])->name('admin.user.destroy');
+/*Thêm-Xoá-Sửa Admin*/
+
+
+
+
 Route::get('/Layouts/Layout_Admin', [UserController::class, 'index_admin']);
 /*Giao diện của Admin*/
 

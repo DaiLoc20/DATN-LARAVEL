@@ -1,10 +1,5 @@
-.container-xxl {
-    width: 100%;
-    max-width: none;
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-    background-color: rgb(255, 255, 255);
-}
+.container-xxl { width: 100%; max-width: none; height: 100%; font-family: 'Roboto', sans-serif;
+                background-color: rgb(255, 255, 255); }
 /*Thông báo đăng nhập và đăng xuất*/
 #flash-message { transition: opacity 0.5s ease-out; }
 #flash-message.hide { opacity: 0; }
@@ -15,36 +10,35 @@
     width: 200px; height: 50px; padding: 10px;
     box-shadow:0  0 1px 1px #00914d;
 }
-.logout-button{ border: none;  background-color: white; font-weight: 900; margin: 0px -6px; }
+.logout-button{ border: none; color: #646464; background-color: white; font-weight: 900; margin: 0px -6px; }
 .list-group-item:hover .logout-button{ color: white; background-color: #3368fb; }
 /*Thông báo đăng nhập và đăng xuất*/
 /*Hình ảnh */
 .list-group-item-image-user{
     list-style-type: none;
     margin-top: 10px; margin-left: 15px; margin-bottom: 10px;
-    border-radius: 20px; border-bottom: 2px;
+    border:1px solid #646464; border-radius: 14px; border-bottom: 1px solid #646464;
     height: 150px; width: 200px;
-    background-color: #3368fb;
+    background-color: #ffffff;box-shadow:0  0 1px 1px #646464;
 }
-
 .img-thumbnail-user{ border-radius: 15px; margin-top: 15px; margin-left: 50px; width: 100px;height: 100px; }
-.font-last-first_name { color: rgb(255, 255, 255); font-weight: 900; margin-left: 30px; margin-top: 5px; margin-bottom: 5px;}
+.font-last-first_name { color: #646464; font-weight: 900; margin-left: 30px; margin-top: 5px; margin-bottom: 6px;}
 /*Hình ảnh */
 /*Danh Sách*/
 .col-3.col3-list-group{
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     margin-left: 10px;
-    margin-top: 0px;
+    margin-top: 5px;
     margin-bottom: 10px;
     width: 17%;
-   /* box-shadow: 0 0 1.5px 1.5px #bf80ff;*/
+    box-shadow: 0 0 1px 1px rgb(255, 255, 255);
 }
 .list-group-item{
     background-color: rgb(255 255 255);
     border: none;
-    color: rgb(60, 60, 60);
-    font-size: 15px;
+    color: #646464;
+    font-size: 14px;
     text-transform: uppercase;
     font-weight: 900;
     margin-top: 5px;
@@ -56,51 +50,15 @@
     color: white;
     background-color: #3368fb;
     text-align: center;
-    font-size: 14px;
-    font-weight: 800;
+    font-size: 15px;
+    font-weight: 900;
 }
-.list-group-item:hover .bi.bi-houses,
-.list-group-item:hover .bi.bi-person-badge,
-.list-group-item:hover .bi.bi-motherboard,
-.list-group-item:hover .bi.bi-window,
-.list-group-item:hover .bi.bi-window-stack,
-.list-group-item:hover .bi.bi-postcard,
-.list-group-item:hover .bi.bi-file-image,
-.list-group-item:hover .bi.bi-clipboard-check,
-.list-group-item:hover .bi.bi-clipboard-pulse,
-.list-group-item:hover .bi.bi-box-arrow-right
-{
-    color: #3368fb;
-    background-color: #ffffff;
-}
-.bi.bi-houses,
-.bi.bi-person-badge,
-.bi.bi-motherboard,
-.bi.bi-window,
-.bi.bi-window-stack,
-.bi.bi-postcard,
-.bi.bi-file-image,
-.bi.bi-clipboard-check,
-.bi.bi-clipboard-pulse,
-.bi.bi-box-arrow-right
-{
-    width:25px ;
-    height:25px ;
-    margin-right: 4px;
-    border-radius: 5px;
-    color: white;
-    background-color: #3368fb;
-    transform: scale(1.2);
-    box-shadow: 0 4px 8px rgba(167, 167, 167, 0.3);
-}
+.list-group-item:hover .bi.bi-houses, .list-group-item:hover .bi.bi-person-badge,.list-group-item:hover .bi.bi-motherboard,.list-group-item:hover .bi.bi-window,.list-group-item:hover .bi.bi-window-stack,.list-group-item:hover .bi.bi-postcard,.list-group-item:hover .bi.bi-file-image,.list-group-item:hover .bi.bi-clipboard-check,
+.list-group-item:hover .bi.bi-clipboard-pulse, .list-group-item:hover .bi.bi-box-arrow-right{ color: #3368fb; background-color: #ffffff; }
+.bi.bi-houses,.bi.bi-person-badge,.bi.bi-motherboard,.bi.bi-window,.bi.bi-window-stack,.bi.bi-postcard,.bi.bi-file-image,.bi.bi-clipboard-check,
+.bi.bi-clipboard-pulse,.bi.bi-box-arrow-right { width:25px ; height:25px ; margin-right: 4px; border-radius: 5px;
+color: white; background-color: #3368fb; transform: scale(1.2);box-shadow: 0 4px 8px rgba(167, 167, 167, 0.3); }
 /*Danh Sách*/
-
 /*Content*/
-.col-9{
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    margin-left: 6px;
-    margin-top: 4px;
-    margin-bottom: 3px;
-}
+.col-9{ background-color: rgb(255, 255, 255); border-radius: 10px; margin-left: 6px; margin-top: 4px; margin-bottom: 3px; }
 /*Content*/

@@ -43,10 +43,10 @@ class UserSeeder extends Seeder
                 'email'=> 'tct2001@gmail.com',
                 'phone'=> '0393482402',
                 'birthday'=> '2002-03-20',
-                'password'=> Hash::make('admin1234'),
+                'password'=> Hash::make('123456789'),
                 'gender' => 0,
                 'address' => '50/42/2 An Phú Đông, Vườn Lài, Quận 12,TP HCM',
-                'is_user_admin' => 1
+                'is_user_admin' => 0
             ],
 
             [
@@ -55,10 +55,10 @@ class UserSeeder extends Seeder
                 'email'=> 'ndt2001@gmail.com',
                 'phone'=> '0393482403',
                 'birthday'=> '2002-04-20',
-                'password'=> Hash::make('admin1234'),
+                'password'=> Hash::make('123456789'),
                 'gender' => 0,
                 'address' => '50/42/2 An Phú Đông, Vườn Lài, Quận 12,TP HCM',
-                'is_user_admin' => 1
+                'is_user_admin' => 0
             ],
 
             [
@@ -67,10 +67,10 @@ class UserSeeder extends Seeder
                 'email'=> 'nnt2001@gmail.com',
                 'phone'=> '0393482406',
                 'birthday'=> '2002-05-20',
-                'password'=> Hash::make('admin1234'),
+                'password'=> Hash::make('123456789'),
                 'gender' => 0,
                 'address' => '50/42/2 An Phú Đông, Vườn Lài, Quận 12,TP HCM',
-                'is_user_admin' => 1
+                'is_user_admin' => 0
             ],
 
 
@@ -80,10 +80,10 @@ class UserSeeder extends Seeder
                 'email'=> 'lnv2002@gmail.com',
                 'phone'=> '0393482402',
                 'birthday'=> '2002-05-22',
-                'password'=> Hash::make('admin1234'),
+                'password'=> Hash::make('123456789'),
                 'gender' => 1,
                 'address' => '50/42/2 An Phú Đông, Vườn Lài, Quận 12,TP HCM',
-                'is_user_admin' => 1
+                'is_user_admin' => 0
             ],
             [
                 'last_name' => 'Lê Ngọc',
@@ -91,10 +91,10 @@ class UserSeeder extends Seeder
                 'email'=> 'lnbn2002@gmail.com',
                 'phone'=> '0393482402',
                 'birthday'=> '2002-12-24',
-                'password'=> Hash::make('admin1234'),
+                'password'=> Hash::make('123456789'),
                 'gender' => 1,
                 'address' => '50/42/2 An Phú Đông, Vườn Lài, Quận 12,TP HCM',
-                'is_user_admin' => 1
+                'is_user_admin' => 0
             ],
 
             [

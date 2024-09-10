@@ -27,8 +27,8 @@
                                      @else
                                         <img src="{{ asset('path/to/default/avatar.png') }}" class="img-thumbnail-user" alt="Default Avatar">
                                     @endif
-                               </div>
-                                <p class="font-last-first_name">{{Auth::user()->last_name.' '.Auth::user()->first_name}}</p>
+                                    <p class="font-last-first_name">{{Auth::user()->last_name.' '.Auth::user()->first_name}}</p>
+                                </div>
                             @endauth
                         </li>
                         <li class="list-group-item">

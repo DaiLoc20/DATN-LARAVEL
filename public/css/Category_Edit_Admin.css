@@ -9,17 +9,21 @@
     background-color: rgb(13 110 253);
     box-shadow: 0 0 1px 1px rgb(249, 249, 249);
 }
+.breadcrumb-item,.breadcrumb-item.active { font-weight: bold; font-size: 12px; }
 .navbar-brand.name{ color: #ffffff; font-weight: 900; font-size: 15px;}
 .navbar-brand.name:hover { color: #ffffff;}
-.breadcrumb-item,.breadcrumb-item.active { font-weight: bold; font-size: 12px; }
-.bi.bi-motherboard.icon-brand { background-color: white; color: rgb(13 110 253);}
+.bi.bi-window.icon-category { background-color: white; color: rgb(13 110 253);}
 /*Thanh điều hướng*/
 
 /*Bảng Thêm Hãng Sản Xuất*/
-.name-Brand{ font-weight: 900; font-size: 15px; vertical-align: middle;}
-.form-control.input-Brand{width: 50% ; margin-top: 5px;}
-.btn.btn-success.save-Brand,.btn.btn-danger.close-Brand{ font-size: 1rem; font-weight: 900; margin-top: 5px;}
-.form-BrandPlus{  width: 50%; padding: 20px;background-color: rgb(255, 255, 255);}
+
+.name-Category{ font-weight: 900; font-size: 14px; vertical-align: middle; margin-top: 10px;margin-bottom: 5px;}
+.name-Category-Parent  {font-weight: 900; font-size: 14px; vertical-align: middle; margin-top: 10px;margin-bottom: 5px;}
+.form-control.input-Category{width: 80% ; margin-top: 5px; font-size: 14px;  }
+.form-control.input-Category-Parent{width: 80% ; margin-top: 5px; margin-bottom: 5px; font-size: 14px;}
+.btn.btn-success.save-Category,.btn.btn-danger.close-Category{ margin-top: 10px; font-size: 1rem; font-weight: 900; }
+.option-none{background-color: rgb(255, 255, 255);}
+.form-CategoryPlus{ width: 50%; padding: 20px; background-color: rgb(255, 255, 255);}
 .coolinput { display: flex; flex-direction: column; width: fit-content; position: static;  max-width: 240px; }
 .coolinput label.text { font-size: 0.9rem; color: #646464; font-weight: 700;
                         position: relative; top: 0.5rem; margin: 0 0 0 7px; padding: 0 3px; background: #ffffff; width: fit-content; }
@@ -28,7 +32,7 @@
 /*Bảng Thêm Hãng Sản Xuất*/
 #flash-message { transition: opacity 0.5s ease-out; }
 #flash-message.hide { opacity: 0; }
-.message-success-store-brand{
+.message-success-update-category{
     font-weight: 600; font-size: 15px; text-align: center; color: #ffffff;
     background-color: #00914d;
     border: 1px solid #00914d; border-radius: 10px;
@@ -36,7 +40,7 @@
     width: 270px; height: 50px; padding: 10px;
     box-shadow:0  0 1px 1px #00914d;
 }
-.message-error-store-brand{
+.message-error-update-category{
     font-weight: 600; font-size: 15px; text-align: center; color: #ffffff;
     background-color: red;
     border: 1px solid red; border-radius: 10px;
@@ -44,20 +48,3 @@
     width: 300px; height: 50px; padding: 10px;
     box-shadow:0  0 1px 1px red;
 }
-.message-success-update-brand{
-    font-weight: 600; font-size: 15px; text-align: center; color: #ffffff;
-    background-color: #00914d;
-    border: 1px solid #00914d; border-radius: 10px;
-    margin-top: 10px;
-    width: 270px; height: 50px; padding: 10px;
-    box-shadow:0  0 1px 1px #00914d;
-}
-.message-error-update-brand{
-    font-weight: 600; font-size: 15px; text-align: center; color: #ffffff;
-    background-color: red;
-    border: 1px solid red; border-radius: 10px;
-    margin-top: 10px;
-    width: 300px; height: 50px; padding: 10px;
-    box-shadow:0  0 1px 1px red;
-}
-

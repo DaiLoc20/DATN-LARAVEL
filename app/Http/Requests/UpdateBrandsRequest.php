@@ -21,7 +21,7 @@ class UpdateBrandsRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [ 'name' => 'required|string|max:50|unique:brands,name',  ];
+        return [ 'name' => 'required|string|max:50|unique:brands,name', ];
     }
     public function messages(): array
     {

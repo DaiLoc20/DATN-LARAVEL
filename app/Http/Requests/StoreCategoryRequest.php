@@ -11,7 +11,7 @@ class StoreCategoryRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,18 @@ class StoreCategoryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+           'name' => 'required|string|max:50|unique:categories,name',
+            'parent_id' => 'nullable|exists:categories,id',
+        ];
+    }
+    public function messages()
+    {
+        return [
+            'name.required' => 'Tên danh mục không được để trống.',
+            'name.string' => 'Tên danh mục phải là một chuỗi ký tự.',
+            'name.max' => 'Tên danh mục không được vượt quá 50 ký tự.',
+            'name.unique' => 'Tên danh mục này đã tồn tại.',
+            'parent_id.exists' => 'Danh mục cha không hợp lệ.',
         ];
     }
 }

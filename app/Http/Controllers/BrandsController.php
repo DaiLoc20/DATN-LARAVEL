@@ -20,17 +20,25 @@ class BrandsController extends Controller
         $query= Brands::with('images')->orderBy('name', $direction);
 
         if ($showNew) {
-            $query->where('created_at', '>=', now()->subDays(1));
+            $query->where('created_at', '>=', now()->subDay());
         } elseif ($showEdited) {
-            $query->where('updated_at', '>', 'created_at')
-                  ->where('updated_at', '>=', now()->subDay());
+            $query->where('updated_at', '>=', now()->subDay())
+                  ->where('updated_at', '!=', 'created_at');
         }
         $brands = $query->paginate(8);
 
-        return view('/Admin/Brand/Brand-List', compact('sort','showNew','showEdited','brands'));
+        return view('/Admin/Brand/Brand-List', [
+            'sort' => $sort,
+            'brands' => $brands,
+            'showNew' => $showNew,
+            'showEdited' => $showEdited
+        ]);
     }
     public function create_brand() { return view('/Admin/Brand/Brand-Plus'); }
-    public function edit_brand(Brands $brands) { return view('/Admin/Brand/Brand-Edit', compact('brands')); }
+    public function edit_brand(Brands $brands)
+    {
+        return view('/Admin/Brand/Brand-Edit', compact('brands'));
+    }
     public function store(StoreBrandsRequest $request)
     {
         try{

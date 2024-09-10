@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Fillter;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use App\Http\Requests\StoreFillterRequest;
 use App\Http\Requests\UpdateFillterRequest;
 
@@ -11,16 +13,26 @@ class FillterController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index_fillter_admin()
+    public function index_fillter_admin(Request $request)
     {
-        $parentFillter = Fillter::whereNull('parent_id')
-        ->with('children')
-        ->paginate(10, ['*'], 'parent_page');
+        $sort = $request->query('sort', 'asc');
+        $direction = $sort === 'desc' ? 'desc' : 'asc';
+        $search = $request->query('search', '');
+        $query = Fillter::with(['children', 'parent']);
+        $showNew = $request->query('show_new', false);
+        $showEdited = $request->query('show_edited', false);
 
-        $childFillter = Fillter::whereNotNull('parent_id')
-        ->with('parent')
-        ->paginate(10, ['*'], 'child_page');
-        return view('/Admin/Fillter/Fillter-List', compact('parentFillter','childFillter'));
+        if ($showNew) { $query->where('created_at', '>=', now()->subDay()); }
+        if ($showEdited) { $query ->where('updated_at', '>=', now()->subDay())
+                              ->where('created_at', '<', now()->subDay()); }
+        if (!empty($search)) {
+            $query->where('name', 'LIKE', "%{$search}%");
+        }
+
+        $query->orderBy('parent_id', $direction);
+        $fillters = $query->paginate(8, ['*'], 'fillter_page')->appends(['sort' => $sort, 'search' => $search]);
+
+        return view('/Admin/Fillter/Fillter-List', ['sort' => $sort,'fillters' => $fillters,'search' => $search,'showNew' => $showNew,'showEdited' => $showEdited]);
     }
 
     /**

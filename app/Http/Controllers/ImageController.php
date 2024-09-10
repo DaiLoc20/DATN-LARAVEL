@@ -25,9 +25,22 @@ class ImageController extends Controller
         return view('/Admin/Image/Image-List',compact('categoryImages','brandImages','userImages'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    public function index_image_brand_admin()
+    {
+        $brandImages = Image::whereNotNull('BrandID')->with('brands')->paginate(6, ['*'], 'brands_page');
+        return view('/Admin/Image/Image-Brand-List',compact('brandImages'));
+    }
+    public function index_image_category_admin()
+    {
+        $categoryImages = Image::whereNotNull('CategoryID')->with('category')->paginate(6, ['*'], 'category_page');
+        return view('/Admin/Image/Image-Category-List',compact('categoryImages'));
+    }
+    public function index_image_user_admin()
+    {
+        $userImages = Image::whereNotNull('UserID')->with('users')->paginate(10, ['*'], 'user_page');
+        return view('/Admin/Image/Image-User-List',compact('userImages'));
+    }
+
     public function create()
     {
         //
