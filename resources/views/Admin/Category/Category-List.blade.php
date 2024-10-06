@@ -170,7 +170,8 @@
                                 </a>
                             </button>
                         </form>
-                        <form action="{{ route('admin.category.destroy', $category->id) }}" method="POST">
+                        <form class="detele"action="{{ route('admin.category.destroy', $category->id) }}" method="POST" >
+                            @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa loại sản phẩm này?')">
                                 <i class="bi bi-trash3-fill"></i>

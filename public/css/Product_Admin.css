@@ -43,6 +43,8 @@
 .table-backgroupColor{font-size: 13px;--bs-table-color: white;--bs-table-bg:  #3368fb ;}
 /*nút*/
 .edit-delete-product { display: flex;margin-left: 30%; }
+.btn.btn-success.plus-product{ margin-bottom: 10px; margin-top: 10px; border-radius: 5px ; width: 50px; height: 35px;
+    font-weight: 900; font-size: 14px ; vertical-align: middle; }
 .edit { margin-right: 4px; }
 /*nút*/
 

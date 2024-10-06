@@ -14,7 +14,7 @@ use App\Http\Controllers\ImageController;
 
 Route::get('/Admin/Fillter/FillterList/FillterProduct', [Product_FillterController::class, 'index_product_fillter_admin']);
 Route::get('/Admin/Image/ImageList', [ImageController::class, 'index_image_admin']);
-Route::get('/Admin/Product/ProductList', [ProductController::class, 'index_product_admin']);
+Route::get('/Admin/Product/ProductList', [ProductController::class, 'index_product_admin'])->name('admin.product.list');
 Route::get('/Admin/Fillter/FillterList', [FillterController::class, 'index_fillter_admin'])->name('admin.fillter.list');
 /*Hình Ảnh*/
 Route::get('/Admin/Image/ImageList', [ImageController::class, 'index_image_admin'])->name('admin.image.list');
@@ -78,4 +78,16 @@ Route::get('/User-Infor', [UserController::class, 'index_user_infor']);
 Route::get('/', function () {
     return redirect('/Layouts/Layout_Admin');
 });
+
+
+/*Thêm xóa sửa sản phẩm */
+Route::get('/Admin/Product/Product-Plus',[ProductController::class,'create_product'])->name('admin.product.plus');
+Route::post('/Admin/Product/Product-Plus',[ProductController::class,'store_product'])->name('admin.product.store');
+
+Route::get('Admin/Product/{products}/Product-Edit', [ProductController::class, 'edit_product'])->name('admin.products.edit');
+Route::put('Admin/Product/{products}', [ProductController::class, 'update_product'])->name('admin.products.update');
+
+Route::get('Admin/Product/{products}/Product-Delete', [ProductController::class, 'delete_product'])->name('admin.products.delete');
+Route::delete('/Admin/Product/{products}/ProductDelete', [ProductController::class, 'destroy_product'])->name('admin.products.delete');
+
 
