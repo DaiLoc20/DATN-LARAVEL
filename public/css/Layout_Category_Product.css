@@ -1,0 +1,13 @@
+.breadcrumb { margin-left: 20px;}
+.breadcrumb-item,.breadcrumb-item.active { font-weight: bold; font-size: 15px;}
+.productTotal-categoryName{ display: flex;}
+.categoryName { font-size: 15px; font-weight: 900; margin-right: 10px;}
+.productTotal { font-size: 15px;  }
+.row { background-color: #e2e2e2;}
+
+/*Thẻ sản phẩm*/
+.card-title.name { font-size: 13px ; }
+.card-text.price { color: red ; font-size: 13px; font-weight: 900; }
+.img-category-product{ width: 200px; height: 200px; }
+
+.bi.bi-bag-plus-fill.icon-cart{ background: #263b96; border-radius: 50%; color: white }

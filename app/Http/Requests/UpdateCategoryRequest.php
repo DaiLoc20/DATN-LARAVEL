@@ -24,6 +24,7 @@ class UpdateCategoryRequest extends FormRequest
         return [
             'name' => 'required|string|max:50|unique:categories,name',
             'parent_id' => 'nullable|exists:categories,id',
+            'path' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
     }
 

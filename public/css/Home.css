@@ -1,0 +1,32 @@
+body { font-family: 'Roboto', sans-serif; }
+.home { background-color:#f2f3f5 ;}
+/*----Col-3----*/
+/*------Danh Mục Sản Phẩm-------*/
+.Category-List { margin-top: 10px; margin-bottom: 10px; margin-left: 30px; }
+.list-group.category-list { box-shadow: 0 0 1px 1px #f2f3f5; border: 2px solid #f2f3f5;}
+.list-group-item.icon-category { background-color: rgb(255, 255, 255); font-weight: bold; font-size: 1.5rem;}
+.list-group-item.font-categoy { font-size: 1rem; display: flex ; }
+.list-group-item.font-categoy:hover { background-color: #f2f3f5; border-left: 4px solid rgb(255, 136, 0)}
+.img-category {padding: 2px; width: 50px ; height: 50px ; margin-right: 10px; border: 1px solid rgb(215, 215, 215); border-radius: 10px;}
+.nav-link.font-categoy { font-weight: 400; margin-top: 12px; }
+.category-list .list-group-item { border-bottom: none; }
+.category-list .list-group-item.last-item { border-bottom: 1px solid rgba(0,0,0,.125);}
+/*------Danh Mục Sản Phẩm-------*/
+/*----Col-3----*/
+
+/*----Col-9----*/
+/*----Img-1-2-3-4----*/
+.img-home-1 { margin-top: 12px; width: 750px; height: 500px; border-radius: 10px;}
+.col-7.list-3-image { margin-left: 190px; margin-top: 15px;}
+.img-fluid.img-home-2 { width: 370px; height: 150px; border-radius: 10px;}
+.img-fluid.img-home-3 { width: 370px; height: 150px; border-radius: 10px;}
+.img-fluid.img-home-4 { width: 370px; height: 150px; border-radius: 10px;}
+/*----Img-1-2-3-4----*/
+/*----Img-5-6-7-8----*/
+.img-home-5-6-7-8 { display: flex; margin-top: 10px; margin-left: 12px; margin-bottom: 10px;}
+.img-fluid.img-home-5 { width: 370px; height: 150px; border-radius: 10px; margin-right: 5px; }
+.img-fluid.img-home-6 { width: 370px; height: 150px; border-radius: 10px; margin-right: 5px; }
+.img-fluid.img-home-7 { width: 370px; height: 150px; border-radius: 10px; margin-right: 5px; }
+.img-fluid.img-home-8 { width: 370px; height: 150px; border-radius: 10px; margin-right: 5px; }
+/*----Img-5-6-7-8----*/
+/*----Col-9----*/

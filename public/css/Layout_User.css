@@ -5,16 +5,42 @@
     font-family: 'Roboto', sans-serif;
     background-color: rgb(255, 255, 255);
 }
-.navbar.navbar-expand-lg{
-    margin-top: 1px;
-    margin-bottom: 10px;
-    height: 70px;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-}
-.nav-login-card{ display: flex; font-weight: 900;}
-.nav-link.nav-font-login { margin-right: 30px; color: #3368fb;}
-.nav-link.nav-font-card { margin-right: 20px; color: #3368fb;}
+body { font-family: 'Roboto', sans-serif; }
+.top-header { background-color: #000000; color: #fff; padding: 5px 250px; font-size: 12px; }
+.top-header-category  { background-color: #ffffff; color: #000000; padding: 8px 250px; font-size: 12px; margin-top: -10px ; }
+.top-header-content { display: flex; justify-content: space-between; margin-left: 20px; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+.navbar.navbar-expand-lg{ margin-top: 1px; margin-bottom: 10px; height: 70px; width: 100%; background-color: #e2e2e2;}
+/*Thanh điều hướng */
+/*Logo*/
+.nav-item.nav-logo { margin-left: 150px; margin-right: 200px; margin-top: -10px;}
+.img-logo-ttg { width: 150px; height: 50px;}
+/*Logo*/
+/*Search*/
+.d-flex.search { width: 250%; margin-top: 10px;}
+.form-control.me-2.input-search { font-size: 1rem ; font-weight: 500;}
+.bi.bi-search.icon-search { margin-top: -5px;}
+/*Search*/
+/*Icon Login - Icon Cart*/
+.bi-person-bi-bag { display: flex; font-size: 1rem ; font-weight: 900; margin-right: 20px;}
+.nav-link.bi-person { margin-right: 40px; color: #000000;}
+.nav-link.bi-bag { margin-right: 40px; color: #000000;}
+.bi.bi-person.icon-bi-person { margin-top: -5px; }
+.bi.bi-bag.icon-bi-bag { margin-top: -5px;}
+/*Icon Login - Icon Cart*/
+/*Thanh điều hướng */
+/*Shipping-Quality-Build*/
+
+/*-----Col-12-------*/
+.Shipping-Quality-Build { display: flex; margin-left: 20%;}
+.div-img-quality { font-size: 15px ;  margin-right: 80px ;}
+.img-quality { width: 25px ; height: 25px;}
+.div-img-shipping { font-size: 15px ; margin-right: 80px; margin-top: -3px;}
+.img-shipping { width: 30px ; height: 30px;}
+.div-img-build { font-size: 15px ; }
+.img-build { width: 25px ; height: 25px;}
+/*-----Col-12-------*/
+/*Shipping-Quality-Build*/
+
 .message-success,.message-failure{
     font-weight: 600; font-size: 15px; text-align: center; color: #00914d;
     border: 1px solid #00914d; border-radius: 10px;
@@ -22,3 +48,9 @@
     width: 200px; height: 50px; padding: 10px;
     box-shadow:0  0 1px 1px #00914d;
 }
+
+/*Content*/
+
+/*Content*/
+/*Footer*/
+/*Footer*/

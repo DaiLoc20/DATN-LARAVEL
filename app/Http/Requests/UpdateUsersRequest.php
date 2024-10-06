@@ -29,6 +29,7 @@ class UpdateUsersRequest extends FormRequest
             'gender' => 'required|integer|in:0,1,2',
             'birthday' => 'nullable|date',
             'address' => 'nullable|string|max:255',
+            'path' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
     }
     public function messages(): array
@@ -43,7 +44,7 @@ class UpdateUsersRequest extends FormRequest
             'gender.required' => 'Vui lòng chọn giới tính.',
             'gender.in' => 'Giới tính không hợp lệ.',
             'birthday.date' => 'Ngày sinh không hợp lệ.',
-            'address.max' => 'Địa chỉ không được vượt quá :max ký tự.',
+            'address.max' => 'Địa chỉ không được vượt quá 255 ký tự.',
         ];
     }
 }

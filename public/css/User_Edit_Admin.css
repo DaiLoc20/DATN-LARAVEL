@@ -16,7 +16,7 @@
 .breadcrumb-item,.breadcrumb-item.active { font-weight: bold; font-size: 12px;}
 /*Thanh điều hướng*/
 /*Bảng chỉnh sửa tài khoản*/
-.form-CategoryPlus{  width: 60%; padding: 20px; background-color: rgb(255, 255, 255); }
+.form-CategoryPlus{  width: 60%; padding: 20px; background-color: rgb(255, 255, 255); margin-top: -30px;}
 .btn.btn-success.save-user,.btn.btn-danger.close-user{ margin-top: 10px; font-size: 1rem; font-weight: 900;}
 .input.form-control.gender{ border: 2px solid #646464; border-radius: 5px; font-size: 0.9rem;padding: 11px 10px; }
 .coolinput { display: flex; flex-direction: column; width: fit-content; position: static;  max-width: 240px; }
@@ -24,7 +24,43 @@
                         position: relative; top: 0.5rem; margin: 0 0 0 7px; padding: 0 3px; background: #ffffff; width: fit-content; }
 .coolinput input[type=text].input { padding: 11px 10px; font-size: 0.9rem; border: 2px #646464 solid; border-radius: 5px;  background: #ffffff; }
 .coolinput input[type=text].input:focus { outline: none; }
+.input.form-control.path-img {
+    padding: 11px 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border: 2px #646464 solid;
+    border-radius: 5px;
+    background: #ffffff;
+}
+.input.form-control.edit-path-img {
+    padding: 11px 10px;
+    font-size: 0.9rem;
+    width: 100%;
+    font-weight: 700;
+    border: 2px #646464 solid;
+    border-radius: 5px;
+    background: #ffffff;
+}
+.img-thumbnail.img-category-edit {
+    width: 150px;
+    height: 150px;
+    border: 2px #646464 solid;
+    border-radius: 5px;
+}
+.img-thumbnail.no-img-category-edit{
+    padding: 11px 10px;
+    width: 100%;
+    font-size: 0.9rem;
+    border: 2px #646464 solid;
+    border-radius: 5px;
+    background: #ffffff;
+}
+.coolinput.col-md-12.img-user{
+ margin-left: 33%;
+}
+.no-img-category { width: 150px; height: 150px; margin-left: 50px;}
 /*Bảng chỉnh sửa tài khoản*/
+
 #flash-message { transition: opacity 0.5s ease-out; }
 #flash-message.hide { opacity: 0; }
 .message-success-update-user{

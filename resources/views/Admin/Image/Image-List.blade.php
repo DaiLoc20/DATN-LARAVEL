@@ -44,19 +44,19 @@
 
             <button type="submit" class="btn btn-primary image-brand" >
                 <a class="nav-link image-brand" href=" {{ route('admin.image.brand.list') }}">
-                    HÌNH ẢNH HÃNG SẢN XUẤT ( BRAND )
+                    HÌNH ẢNH HÃNG SẢN XUẤT | BRAND |
                 </a>
             </button>
 
             <button type="submit" class="btn btn-primary image-category">
                 <a class="nav-link image-category" href=" {{ route('admin.image.category.list') }}">
-                    HÌNH ẢNH LOẠI SẢN PHẨM ( PARENT )
+                    HÌNH ẢNH LOẠI SẢN PHẨM | PARENT |
                 </a>
             </button>
 
             <button type="submit" class="btn btn-primary image-product">
-                <a class="nav-link image-product" href=" ">
-                    HÌNH ẢNH SẢN PHẨM
+                <a class="nav-link image-product" href=" {{ route('admin.image.product.list')}} ">
+                    HÌNH ẢNH SẢN PHẨM | PRODUCT |
                 </a>
             </button>
       </nav>

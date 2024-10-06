@@ -32,6 +32,11 @@
 .bi.bi-sort-alpha-down, .bi.bi-sort-alpha-up-alt,.bi.bi-arrow-clockwise{ color: white; }
 .bi.bi-sort-alpha-down, .bi.bi-sort-alpha-up-alt { margin-top:-5px;}
 /*Nút Sắp Xếp Tăng-Giảm Dần*/
+/*Tìm kiếm*/
+.d-flex.search { margin-left: 5px; margin-top: -1.5px;}
+.form-control.me-2.search{ font-size: 1rem; font-weight: 900; }
+.result-seacrh { font-size: 1rem; font-weight: 900; margin-left:63px; margin-top: -5px;}
+/*Tìm kiếm*/
 /*Bảng danh sách user*/
 .alert.alert-info{ font-weight: 900; margin-left: 65px;
     width: 1110px; height: 300px;

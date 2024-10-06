@@ -15,7 +15,8 @@
 .navbar-fillter.name:hover { color: #ffffff;}
 .breadcrumb-item,.breadcrumb-item.active { font-weight: bold; font-size: 12px;}
 .bi.bi-postcard.icon-fillter{ font-family: 'Roboto', sans-serif; background-color: white; color: rgb(13 110 253); box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3); }
-.nav-link.nav-font-fillterproduct{  font-weight: 900; color: #ffffff; margin-top: -3px; margin-left: 35px;} .nav-link.nav-font-fillterproduct:hover{ font-weight: 900; color: #ffffff; }
+.nav-link.nav-font-fillterproduct{  font-weight: 900; color: white; margin-top: -1px;}
+.nav-link.nav-font-fillterproduct:hover{ font-weight: 900; color: white; }
 /*Thanh điều hướng*/
 /*Nút Thêm , Sắp Xếp Tăng-Giảm Dần*/
 .navbar.nav-function{ display: flex; align-items: center; margin-top: -12px; }
@@ -27,6 +28,7 @@
 .btn.btn-success.btn-desc{ border-radius: 5px; width: 50px; height: 35px; margin-left: 5px; }
 .btn.btn-success.show-new-fillter { font-weight: 900; font-size: 14px; margin-left: 5px;}
 .btn.btn-success.show-edit-fillter { font-weight: 900; font-size: 14px; margin-left: 5px; }
+.btn.btn-success.product_fillter { font-weight: 900; font-size: 14px; margin-left: 5px;}
 .d-flex.search { margin-left: 5px; margin-top: -1.5px;}
 .form-control.me-2.search{ font-size: 1rem; font-weight: 900; }
 .bi.bi-plus-square-fill, .bi.bi-arrow-clockwise{ margin-top: -2px;}
@@ -78,4 +80,50 @@
 .custom-pagination .page-item.active .page-link { background-color: #1e4cd1; border-color: #1e4cd1; }
 .custom-pagination .page-item .page-link:hover { background-color: #5684fc;  border-color: #5684fc;}
 .custom-pagination .page-item.disabled .page-link {background-color: #a3b8fd; border-color: #a3b8fd; color: #e6ecff; }
-
+#flash-message { transition: opacity 0.5s ease-out; }
+#flash-message.hide { opacity: 0; }
+.message-success-destroy-fillter{
+    font-weight: 900;
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #00914d;
+    border: 1px solid #00914d;
+    border-radius: 10px;
+    margin-top: -34px;
+    margin-left: 45%;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    box-shadow: 0 0 1px 1px #00914d;
+}
+.message-error1-destroy-fillter{
+    font-weight: 900;
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 10px;
+    margin-top: -34px;
+    margin-left: 73%;
+    width: 400px;
+    height: 50px;
+    padding: 10px;
+    box-shadow: 0 0 1px 1px red;
+}
+.message-error-destroy-fillter{
+    font-weight: 900;
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 10px;
+    margin-top: -34px;
+    margin-left: 73%;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    box-shadow: 0 0 1px 1px red;
+}

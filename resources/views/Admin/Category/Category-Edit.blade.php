@@ -22,7 +22,7 @@
                 <a class="navbar-brand name">
                     <i class="bi bi-window icon-category"></i>
                     <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-window icon-category" viewBox="0.5 -2 15 22"> <path d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/><path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm13 2v2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1M2 14a1 1 0 0 1-1-1V6h14v7a1 1 0 0 1-1 1z"/> </svg>
-                    CHỈNH SỬA LOẠI SẢN PHẨM ( PARENT - CHILDREN )
+                    CHỈNH SỬA LOẠI SẢN PHẨM | PARENT - CHILDREN |
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
@@ -32,33 +32,53 @@
 
        <nav style="--bs-breadcrumb-divider: '/'" aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('admin.category.list')}}" class="nav-link">DANH SÁCH LOẠI SẢN PHẨM ( PARENT - CHILDREN )</a></li>
-                <li class="breadcrumb-item active"><a>CHỈNH SỬA LOẠI SẢN PHẨM ( PARENT - CHILDREN )</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.category.list')}}" class="nav-link">DANH SÁCH LOẠI SẢN PHẨM | PARENT - CHILDREN |</a></li>
+                <li class="breadcrumb-item active"><a>CHỈNH SỬA LOẠI SẢN PHẨM | PARENT - CHILDREN |</a></li>
             </ol>
        </nav>
        <div class="form-CategoryPlus">
-        <form action="{{ route('admin.category.update', $category->id) }}" method="POST" enctype="multipart/form-data">
+        <form class="row g-3" action="{{ route('admin.category.update', $category->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
-            <div class="coolinput col-md-6">
+            <div class="coolinput col-md-12">
                 <label for="name" class="text">Tên Loại Sản Phẩm :</label>
                 <input type="text" class="input form-control " id="name" name="name" value="{{ old('name', $category->name) }}"  required>
             </div>
 
+            <div class="coolinput col-md-12">
+                <label for="name" class="text" >Hình ảnh hiện tại:</label>
+                <div >
+                    @if ($category->images->isNotEmpty())
+                        @foreach($category->images as $image)
+                            <img src="{{ asset($image->path) }}" alt="{{ $category->name }}" class="img-thumbnail img-category-edit">
+                        @endforeach
+                    @else
 
-            <div class="coolinput col-md-6">
+                            <img class="img-thumbnail img-category-edit" src="/storage/img/NoImage/NO-IMAGE.jpg" alt="">
+
+                    @endif
+                </div>
+            </div>
+
+            <div class="coolinput col-md-12">
+                <label for="path" class="text">Hình ảnh chỉnh sửa:</label>
+                <input type="file" class="input form-control edit-path-img" id="path" name="path">
+            </div>
+
+            <div class="coolinput col-md-12">
                 <label class="text">Loại Sản Phẩm :</label>
                 <input type="text" class="input form-control " value="{{ $category->parent_id === null ? 'Loại parent' : 'Loại children' }}" readonly>
                 <input type="hidden" name="category_type" value="{{ $category->parent_id === null ? 'parent' : 'child' }}">
             </div>
 
             @if($category->parent_id !== null)
-            <div class="coolinput col-md-6">
-                <label class="text">Thuộc Loại Sản Phẩm Parent : </label>
-                <input type="text" class="input form-control " value="{{ $category->parent->name ?? 'Không có' }}" readonly>
-                <input type="hidden" name="parent_id" value="{{ $category->parent_id }}">
-            </div>
+                <div class="coolinput col-md-12">
+                    <label class="text">Thuộc Loại Sản Phẩm Parent : </label>
+                    <input type="text" class="input form-control " value="{{ $category->parent->name ?? 'Không có' }}" readonly>
+                    <input type="hidden" name="parent_id" value="{{ $category->parent_id }}">
+                </div>
             @endif
+
             <div class="form-group">
             <button type="submit" class="btn btn-success save-Category">
                 <i class="bi bi-floppy-fill"></i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-floppy-fill" viewBox="0 0 16 16"><path d="M0 1.5A1.5 1.5 0 0 1 1.5 0H3v5.5A1.5 1.5 0 0 0 4.5 7h7A1.5 1.5 0 0 0 13 5.5V0h.086a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5H14v-5.5A1.5 1.5 0 0 0 12.5 9h-9A1.5 1.5 0 0 0 2 10.5V16h-.5A1.5 1.5 0 0 1 0 14.5z"/><path d="M3 16h10v-5.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5zm9-16H4v5.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5zM9 1h2v4H9z"/></svg>

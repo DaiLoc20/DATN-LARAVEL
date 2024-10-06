@@ -32,6 +32,11 @@
 .breadcrumb-item,.breadcrumb-item.active { font-weight: bold; font-size: 12px;}
 .bi.bi-window.icon-category{ font-family: 'Roboto', sans-serif; background-color: white; color: rgb(13 110 253); box-shadow: 0 3px 3px rgba(167, 167, 167, 0.3); }
 /*Thanh điều hướng*/
+/*Tìm kiếm*/
+.d-flex.search { margin-left: 5px; margin-top: -1.5px;}
+.form-control.me-2.search{ font-size: 1rem; font-weight: 900; }
+.result-seacrh { font-size: 1rem; font-weight: 900; margin-left:63px; margin-top: -5px;}
+/*Tìm kiếm*/
 /*Bảng loại sản phẩm */
 .alert.alert-info{ font-weight: 900; margin-left: 65px;
     width: 1110px; height: 300px;
@@ -60,6 +65,8 @@
 .category-border-td-stt,.category-border-td-ID,.category-border-td-nameCategory,.category-border-td-img,.category-border-td-categoryProduct,.category-border-td-nameParent,.category-border-td-counChidern,.category-border-td-function
 { Border-right:  1px solid rgb(236, 236, 236);  vertical-align: middle;}
 .img-parent { width: 50px;}
+.img-category{ width: 50px;}
+.no-img-category { width: 50px; height: 50px;}
 .category-border-td-function { width: 12%; }
 /*th-td*/
 /*Bảng loại sản phẩm con*/

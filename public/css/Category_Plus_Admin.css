@@ -24,7 +24,7 @@
 .form-control.input-Category{ width: 80% ; margin-top: 5px; font-size: 14px;}
 .form-control.input-Category-Parent{ width: 80% ; margin-top: 5px; margin-bottom: 5px; font-size: 14px;}
 .form-control.input-Category-ListParent{ width: 80%; margin-top: 5px; margin-bottom: 5px; font-size: 14px;}
-
+.input.form-control.path-img { padding: 11px 10px; font-size: 0.9rem; font-weight: 700; border: 2px #646464 solid; border-radius: 5px;background: #ffffff; }
 .btn.btn-success.save-Category,.btn.btn-danger.close-Category{ margin-top: 10px; font-size: 1rem; font-weight: 900;}
 .option-none{background-color: rgb(255, 255, 255);}
 .form-CategoryPlus{  width: 50%; padding: 20px; background-color: rgb(255, 255, 255); }

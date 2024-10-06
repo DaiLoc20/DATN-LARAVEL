@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 
@@ -16,17 +18,22 @@ class CategoryController extends Controller
         $direction = $sort === 'desc' ? 'desc' : 'asc';
         $showNew = $request->query('show_new', false);
         $showEdited = $request->query('show_edited', false);
-
+        $search = $request->query('search', '');
         $query = Category::with(['children', 'images', 'parent']);
+
+        if (!empty($search)) {
+            $query->where('name', 'LIKE', "%{$search}%");
+        }
 
         if ($showNew) { $query->where('created_at', '>=', now()->subDay()); }
         if ($showEdited) { $query ->where('updated_at', '>=', now()->subDay())
                               ->where('created_at', '<', now()->subDay()); }
 
         $query->orderBy('parent_id', $direction);
-        $categories = $query->paginate(6, ['*'], 'category_page');
+        $categories = $query->paginate(6, ['*'], 'category_page')->appends(['sort' => $sort, 'search' => $search]);
 
-        return view('/Admin/Category/Category-List', ['sort' => $sort,'categories' => $categories,'showNew' => $showNew,'showEdited' => $showEdited]);
+
+        return view('/Admin/Category/Category-List', ['sort' => $sort,'categories' => $categories,'showNew' => $showNew,'showEdited' => $showEdited ,'search'=>$search]);
     }
 
     public function create_category()
@@ -36,17 +43,44 @@ class CategoryController extends Controller
     }
     public function edit_category($id)
     {
-        $category = Category::findOrFail($id);
-        $categories = Category::whereNull('parent_id')->get();
+        $category = Category::with('images')->findOrFail($id);
+
+        $categories = Category::whereNull('parent_id')
+                              ->where('id', '!=', $id)
+                              ->orderBy('name')
+                              ->get();
+        $categories->load('images');
         return view('/Admin/Category/Category-Edit', compact('category', 'categories'));
     }
+     /* Hình Ảnh */
+     protected function fixImage(Category $category, Request $request)
+     {
+         if ($request->hasFile('path')) {
+             $file = $request->file('path');
+             $filename = time() . '_' . $file->getClientOriginalName();
+             $filePath = $file->storeAs('/img/Category/', $filename, 'public');
+         }
+         else {
+             $filePath = '/img/NoImage/NO-IMAGE.jpg';
+         }
+         $oldImage = Image::where('CategoryID', operator: $category->id)->first();
+         if ($oldImage) {
+             Storage::disk('public')->delete(str_replace('/img/Brand/', '', $oldImage->path));
+             $oldImage->delete();
+         }
+         Image::create([
+             'CategoryID' => $category->id,
+             'path' => Storage::url($filePath),
+         ]);
+         return true;
+     }
+     /* Hình Ảnh */
     public function store(StoreCategoryRequest $request)
     {
         try{
-            $category = new Category();
-            $category->name = $request->name;
-            $category->parent_id = $request->parent_id;
-            $category->save();
+            $categories = Category::create([ 'name'=> $request->name, 'parent_id'=> $request->parent_id ]);
+            $this->fixImage( $categories, $request);
+            $categories->save();
             return redirect()->route('admin.category.plus')->with('success-store-category', 'Thêm loại sản phẩm  thành công !');
         }
         catch(\Exception $e){
@@ -58,7 +92,9 @@ class CategoryController extends Controller
     {
         try{
             $validated = $request->validated();
-            $category->update($validated);
+            $category->name = $validated['name'];
+            $this->fixImage( $category, $request);
+            $category->save();
             return redirect()->route('admin.category.edit',$category->id)->with('success-update-category', 'Sửa loại sản phẩm thành công !');
         }catch(\Exception $e){
             Log::error('Lỗi khi sửa loai sản phẩm : ' . $e->getMessage());

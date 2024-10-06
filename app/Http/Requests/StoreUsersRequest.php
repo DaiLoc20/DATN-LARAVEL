@@ -6,14 +6,10 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class StoreUsersRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     */
     public function authorize(): bool
     {
         return true;
     }
-
     /**
      * Get the validation rules that apply to the request.
      *
@@ -30,6 +26,7 @@ class StoreUsersRequest extends FormRequest
             'gender' => 'required|in:0,1,2',
             'birthday' => 'nullable|date',
             'address' => 'nullable|string|max:255',
+            'path' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
     }
     public function messages(): array

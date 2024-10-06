@@ -22,7 +22,7 @@
           <a class="navbar-brand name">
             <i class="bi bi-window"></i>
             <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-window icon-category" viewBox="0.5 -2 15 22"> <path d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/><path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm13 2v2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1M2 14a1 1 0 0 1-1-1V6h14v7a1 1 0 0 1-1 1z"/> </svg>
-            THÊM LOẠI SẢN PHẨM ( PARENT - CHILDREN )
+            THÊM LOẠI SẢN PHẨM | PARENT - CHILDREN |
           </a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
@@ -32,32 +32,36 @@
 
       <nav style="--bs-breadcrumb-divider: '/'" aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{{ route('admin.category.list')}}" class="nav-link">DANH SÁCH LOẠI SẢN PHẨM ( PARENT - CHILDREN )</a></li>
-          <li class="breadcrumb-item active"><a>THÊM LOẠI SẢN PHẨM ( PARENT - CHILDREN )</a></li>
+          <li class="breadcrumb-item"><a href="{{ route('admin.category.list')}}" class="nav-link">DANH SÁCH LOẠI SẢN PHẨM | PARENT - CHILDREN |</a></li>
+          <li class="breadcrumb-item active"><a>THÊM LOẠI SẢN PHẨM | PARENT - CHILDREN |</a></li>
         </ol>
      </nav>
 
     <div class="form-CategoryPlus">
-        <form action="{{ route('admin.category.store') }}" method="POST" enctype="multipart/form-data">
+        <form class="row g-3" method="POST" action="{{ route('admin.product.store') }}" enctype="multipart/form-data">
             @csrf
-
-            <div class="coolinput col-md-6">
+            <div class="coolinput col-md-7">
                 <label for="name" class="text">Tên Loại Sản Phẩm :</label>
                 <input type="text" class="input form-control " id="name" name="name" required>
             </div>
 
-            <div class="coolinput col-md-6">
-                <label for="is_parent" class="text">Giới Tính</label>
+            <div class="coolinput col-md-7">
+                <label for="path " class="text">Hình ảnh:</label>
+                <input type="file" class="input form-control path-img" id="path" name="path" accept="image/*">
+           </div>
+
+            <div class="coolinput col-md-7">
+                <label for="is_parent" class="text">Loại Sản Phẩm :</label>
                 <select type="text" class="input form-control is_parent form-select" id="is_parent" name="is_parent" required>
-                    <option  value="" >Chọn Giới Tính</option>
+                    <option  value="" >Chọn Loại Sản Phẩm</option>
                     <option  value="1">Parent</option>
                     <option  value="0">Children</option>
                 </select>
             </div>
 
 
-            <div class="coolinput col-md-6" id="parent_category_group" style="display: none;">
-                <label for="parent_id" class="text">Danh Sách Của Parent: </label>
+            <div class="coolinput col-md-7" id="parent_category_group" style="display: none;">
+                <label for="parent_id" class="text">Danh Sách Của Parent : </label>
                 <select type="text" class="input form-control is_parent form-select" id="parent_id" name="parent_id">
                     <option selected value="">Chọn Parent</option>
                     @foreach($categories as $id => $name)
