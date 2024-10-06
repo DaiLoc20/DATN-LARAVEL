@@ -10,6 +10,7 @@
     box-shadow: 0 0 1px 1px rgb(249, 249, 249);
 }
 
+
 .breadcrumb-item,.breadcrumb-item.active { font-weight: bold; font-size: 12px; }
 .navbar-brand.name{ color: #ffffff; font-weight: 900; font-size: 15px;}
 .navbar-brand.name:hover { color: #ffffff;}
@@ -35,4 +36,15 @@
     box-shadow:0  0 1px 1px red;
 }
 
+
+
+.navbar-product-edit.name{ color: #ffffff; font-weight: 900; font-size: 15px;}
+.navbar-product-edit.name:hover { color: #ffffff;}
+.bi.bi-window-stack.icon-product { background-color: white; color: rgb(13 110 253);}
+.breadcrumb-item,.breadcrumb-item.active { font-weight: bold; font-size: 12px;}
+.btn.btn-search{ background-color: rgb(13 110 253); color: white;}
+.btn.btn-search:hover{ background-color: rgb(2, 87, 214); color: white;}
+.form-control.me-2.font-search{ font-weight: 900; }
+.d-flex.form-search { margin-right: -6%;}
+/*Thanh điều hướng*/
 

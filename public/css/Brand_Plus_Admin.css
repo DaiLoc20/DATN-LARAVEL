@@ -1,5 +1,5 @@
 /*Thanh điều hướng*/
-.navbar.navbar-expand-lg{
+.navbar.navbar-expand-lg {
     margin-top: 10px;
     margin-bottom: 10px;
     height: 70px;
@@ -9,55 +9,127 @@
     background-color: rgb(13 110 253);
     box-shadow: 0 0 1px 1px rgb(249, 249, 249);
 }
-.navbar-brand.name{ color: #ffffff; font-weight: 900; font-size: 15px;}
-.navbar-brand.name:hover { color: #ffffff;}
-.breadcrumb-item,.breadcrumb-item.active { font-weight: bold; font-size: 12px; }
-.bi.bi-motherboard.icon-brand { background-color: white; color: rgb(13 110 253);}
+.navbar-brand.name { color: #ffffff; font-weight: 900; font-size: 15px; }
+.navbar-brand.name:hover { color: #ffffff; }
+.breadcrumb-item, .breadcrumb-item.active { font-weight: bold; font-size: 12px; }
+.bi.bi-motherboard.icon-brand {  background-color: white; color: rgb(13 110 253); }
 /*Thanh điều hướng*/
 
 /*Bảng Thêm Hãng Sản Xuất*/
-.name-Brand{ font-weight: 900; font-size: 15px; vertical-align: middle;}
-.form-control.input-Brand{width: 50% ; margin-top: 5px;}
-.btn.btn-success.save-Brand,.btn.btn-danger.close-Brand{ font-size: 1rem; font-weight: 900; margin-top: 5px;}
-.form-BrandPlus{  width: 50%; padding: 20px;background-color: rgb(255, 255, 255);}
-.coolinput { display: flex; flex-direction: column; width: fit-content; position: static;  max-width: 240px; }
-.coolinput label.text { font-size: 0.9rem; color: #646464; font-weight: 700;
-                        position: relative; top: 0.5rem; margin: 0 0 0 7px; padding: 0 3px; background: #ffffff; width: fit-content; }
-.coolinput input[type=text].input { padding: 11px 10px; font-size: 0.9rem; border: 2px #646464 solid; border-radius: 5px;  background: #ffffff; }
+.name-Brand { font-weight: 900; font-size: 15px; vertical-align: middle; }
+.form-control.input-Brand {  width: 50%; margin-top: 5px; }
+.form-group.brand-edit { margin-top: 10px; }
+.no-img-brand { width: 150px ; height: 150px ; }
+.btn.btn-success.save-Brand,.btn.btn-danger.close-Brand { font-size: 1rem; font-weight: 900; margin-top: 5px;}
+.form-BrandPlus { width: 40%; padding: 20px; margin-left: 5%; background-color: rgb(255, 255, 255); }
+.form-BrandEdit { width: 40%; padding: 20px; margin-top: -37px; margin-left: 5%; background-color: rgb(255, 255, 255); }
+.coolinput { display: flex; flex-direction: column; width: fit-content;  position: static; max-width: 240px; }
+.coolinput label.text {
+    font-size: 0.9rem;
+    color: #646464;
+    font-weight: 700;
+    position: relative;
+    top: 0.5rem;
+    margin: 0 0 0 7px;
+    padding: 0 3px;
+    background: #ffffff;
+    width: fit-content;
+}
+.coolinput input[type=text].input {
+    padding: 11px 10px;
+    font-size: 0.9rem;
+    border: 2px #646464 solid;
+    border-radius: 5px;
+    background: #ffffff;
+}
 .coolinput input[type=text].input:focus { outline: none; }
+.input.form-control.path-img {
+    padding: 11px 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border: 2px #646464 solid;
+    border-radius: 5px;
+    background: #ffffff;
+}
+.input.form-control.edit-path-img {
+    padding: 11px 10px;
+    font-size: 0.9rem;
+    width: 100%;
+    font-weight: 700;
+    border: 2px #646464 solid;
+    border-radius: 5px;
+    background: #ffffff;
+}
+.img-thumbnail.img-brand-edit {
+    width: 100%;
+    margin-right: 10px;
+    border: 2px #646464 solid;
+    border-radius: 5px;
+}
+.img-thumbnail.no-img-brand-edit{
+    padding: 11px 10px;
+    width: 100%;
+    font-size: 0.9rem;
+    border: 2px #646464 solid;
+    border-radius: 5px;
+    background: #ffffff;
+}
 /*Bảng Thêm Hãng Sản Xuất*/
 #flash-message { transition: opacity 0.5s ease-out; }
 #flash-message.hide { opacity: 0; }
-.message-success-store-brand{
-    font-weight: 600; font-size: 15px; text-align: center; color: #ffffff;
+.message-success-store-brand {
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff;
     background-color: #00914d;
-    border: 1px solid #00914d; border-radius: 10px;
+    border: 1px solid #00914d;
+    border-radius: 10px;
     margin-top: 10px;
-    width: 270px; height: 50px; padding: 10px;
-    box-shadow:0  0 1px 1px #00914d;
+    width: 270px;
+    height: 50px;
+    padding: 10px;
+    box-shadow: 0 0 1px 1px #00914d;
 }
-.message-error-store-brand{
-    font-weight: 600; font-size: 15px; text-align: center; color: #ffffff;
+.message-error-store-brand {
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff;
     background-color: red;
-    border: 1px solid red; border-radius: 10px;
+    border: 1px solid red;
+    border-radius: 10px;
     margin-top: 10px;
-    width: 300px; height: 50px; padding: 10px;
-    box-shadow:0  0 1px 1px red;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    box-shadow: 0 0 1px 1px red;
 }
-.message-success-update-brand{
-    font-weight: 600; font-size: 15px; text-align: center; color: #ffffff;
+.message-success-update-brand {
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff;
     background-color: #00914d;
-    border: 1px solid #00914d; border-radius: 10px;
+    border: 1px solid #00914d;
+    border-radius: 10px;
     margin-top: 10px;
-    width: 270px; height: 50px; padding: 10px;
-    box-shadow:0  0 1px 1px #00914d;
+    width: 270px;
+    height: 50px;
+    padding: 10px;
+    box-shadow: 0 0 1px 1px #00914d;
 }
-.message-error-update-brand{
-    font-weight: 600; font-size: 15px; text-align: center; color: #ffffff;
+.message-error-update-brand {
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff;
     background-color: red;
-    border: 1px solid red; border-radius: 10px;
+    border: 1px solid red;
+    border-radius: 10px;
     margin-top: 10px;
-    width: 300px; height: 50px; padding: 10px;
-    box-shadow:0  0 1px 1px red;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    box-shadow: 0 0 1px 1px red;
 }
-

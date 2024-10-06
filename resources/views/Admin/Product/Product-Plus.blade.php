@@ -17,6 +17,7 @@
     @endsection
 
     @section('content')
+
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand name">
@@ -39,6 +40,33 @@
 
     <div class="form-ProductPlus">
         <form action="{{ route('admin.product.store') }}" method="POST" enctype="multipart/form-data">
+
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-product name nav-link" href=" {{ route('admin.product.plus')}}">
+            <i class="bi bi-window-stack icon-product"></i>
+            <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-window-stack icon-product" viewBox="0.5 -2 15 21"><path d="M4.5 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M6 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/><path d="M12 1a2 2 0 0 1 2 2 2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2 2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM2 12V5a2 2 0 0 1 2-2h9a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1m1-4v5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8zm12-1V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v2z"/></svg>
+            THÊM SẢN PHẨM | PRODUCT |
+          </a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <nav style="--bs-breadcrumb-divider: '/'" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item "><a class="nav-link" href=" {{ route('admin.product.list') }}">DANH SÁCH SẢN PHẨM | PRODUCT |</a></li>
+          <li class="breadcrumb-item active">THÊM SẢN PHẨM | PRODUCT |</li>
+        </ol>
+    </nav>
+
+    <div class="form-ProductPlus">
+        <form class="row g-3" action="{{ route('admin.product.store') }}" method="POST" enctype="multipart/form-data">
+
             @csrf
             <div class="coolinput col-md-6">
                 <label for="name" class="text">Tên sản phẩm :</label>
@@ -80,6 +108,13 @@
                 @enderror
             </div>
 
+
+
+            <div class="form-group">
+                <label for="path">Hình Ảnh Sản Phẩm</label>
+                <input type="file" class="form-control-file" id="path" name="path[]" multiple>
+            </div>
+
             <div class="form-group">
                 <button type="submit" class="btn btn-success save-Product">
                     <i class="bi bi-floppy-fill"></i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-floppy-fill" viewBox="0 0 16 16"><path d="M0 1.5A1.5 1.5 0 0 1 1.5 0H3v5.5A1.5 1.5 0 0 0 4.5 7h7A1.5 1.5 0 0 0 13 5.5V0h.086a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5H14v-5.5A1.5 1.5 0 0 0 12.5 9h-9A1.5 1.5 0 0 0 2 10.5V16h-.5A1.5 1.5 0 0 1 0 14.5z"/><path d="M3 16h10v-5.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5zm9-16H4v5.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5zM9 1h2v4H9z"/></svg>
@@ -93,6 +128,9 @@
         </form>
     </div>
 
+
+
+
     @if (session('success-store-product'))
         <div id="flash-message" class="message-success-store-product"> {{ session('success-store-product') }} </div>
     @endif
@@ -100,16 +138,26 @@
     @if (session('error-store-product'))
         <div id="flash-message" class="message-error-store-product"> {{ session('error-store-product') }} </div>
     @endif
+
+
+
+
+
     @endsection
 
 
     @section('footer')
         @parent
     @endsection
+
     <script src="{{ asset('/js/product-admin-plus.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
 </body>
 </html>

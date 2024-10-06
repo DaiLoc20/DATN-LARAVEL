@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Brands;
-
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Log;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use App\Http\Requests\CreateProductRequest;
@@ -36,29 +38,29 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store_product(StoreProductRequest $request)
+    public function store_Product(StoreProductRequest $request)
     {
         try{
-
 
             $name = $request->input('name');
             $price = $request->input('price');
             $CategoryID = $request->input('CategoryID');
             $BrandID = $request->input('BrandID');
 
-            $product = Product::create([
+           $product = Product::create([
                 'name' => $name,
                 'price' => $price,
                 'CategoryID' => $CategoryID,
                 'BrandID' => $BrandID
             ]);
-
+            $this->fixImage( $product, $request);
             $product->save();
-            return redirect()->route('admin.product.plus')->with('success-store-product', 'Thêm sản phẩm thành công !');
+
+            return redirect()->route('admin.product.plus')->with('success-store-product', 'Thêm sản phẩm  thành công !');
         }
         catch(\Exception $e){
-            Log::error('Lỗi khi thêm hãng sản phẩm: ' . $e->getMessage());
-            return redirect()->route('admin.product.plus')->with('error-store-product', 'Thêm sản phẩm không thành công');
+            Log::error('Lỗi khi thêm sản phẩm : ' . $e->getMessage());
+            return redirect()->route('admin.product.plus')->with('error-store-product', 'Thêm sản phẩm  không thành công');
         }
     }
 

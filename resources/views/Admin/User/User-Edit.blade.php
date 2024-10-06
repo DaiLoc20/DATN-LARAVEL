@@ -38,37 +38,53 @@
     </nav>
 
     <div class="form-CategoryPlus">
-        <form class="row g-3" action="{{ route('admin.user.update', $user->id) }}" method="POST" enctype="multipart/form-data">
+        <form class="row g-3"  action="{{ route('admin.user.update', $user->id) }}"  method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
+
+            <div class="coolinput col-md-12 img-user">
+                <label for="name" class="text" >Hình ảnh hiện tại:</label>
+                <div >
+                    @if ($user->images->isNotEmpty())
+                        @foreach($user->images as $image)
+                            <img src="{{ asset($image->path) }}" alt="{{ $user->last_name }} {{ $user->first_name}}" class="img-thumbnail img-category-edit">
+                        @endforeach
+                    @else
+                        <p class="img-thumbnail no-img-category-edit">
+                            <img class="no-img-category" src="/storage/img/NoImage/NO-IMAGE.jpg" alt="">
+                        </p>
+                    @endif
+                </div>
+            </div>
+
             <div class="coolinput col-md-6">
                 <label for="last_name" class="text">Họ:</label>
-                <input type="text" class="input form-control " id="last_name" name="last_name" value="{{ old('last_name', $user->last_name) }}" required>
+                <input type="text" class="input form-control " id="last_name" name="last_name" value="{{ old('last_name', $user->last_name) }}" >
             </div>
 
             <div class="coolinput col-md-6">
                 <label for="first_name" class="text">Tên:</label>
-                <input type="text" class="input form-control" id="first_name" name="first_name" value="{{ old('first_name', $user->first_name) }}" required>
+                <input type="text" class="input form-control" id="first_name" name="first_name" value="{{ old('first_name', $user->first_name) }}" >
             </div>
 
             <div class="coolinput col-md-6">
                 <label for="email" class="text">Email:</label>
-                <input type="text" class="input form-control" id="email" name="email" value="{{ old('email', $user->email) }}" required>
+                <input type="text" class="input form-control" id="email" name="email" value="{{ old('email', $user->email) }}" >
             </div>
 
             <div class="coolinput col-md-6">
                 <label for="phone" class="text">Số Điện Thoại:</label>
-                <input type="text" class="input form-control" id="phone" name="phone" value="{{ old('phone', $user->phone) }}" required>
+                <input type="text" class="input form-control" id="phone" name="phone" value="{{ old('phone', $user->phone) }}" >
             </div>
 
             <div class="coolinput col-md-6">
                 <label for="birthday" class="text">Ngày Sinh:</label>
-                <input type="text" class="input form-control" id="birthday" name="birthday" value="{{ old('birthday', $user->birthday) }}" required>
+                <input type="text" class="input form-control" id="birthday" name="birthday" value="{{ old('birthday', $user->birthday) }}" >
             </div>
 
             <div class="coolinput col-md-6">
                 <label for="gender" class="text">Giới Tính</label>
-                <select type="text" class="input form-control gender" id="gender" name="gender" required>
+                <select type="text" class="input form-control gender" id="gender" name="gender" >
                     <option  value="" >Chọn Giới Tính</option>
                     <option  value="0" {{ old('gender', $user->gender) == 0 ? 'selected' : '' }}>Nam</option>
                     <option  value="1" {{ old('gender', $user->gender) == 1 ? 'selected' : '' }}>Nữ</option>
@@ -77,18 +93,22 @@
 
            <div class="coolinput col-md-12">
                 <label for="address" class="text">Địa Chỉ:</label>
-                <input type="text" class="input form-control" id="address" name="address" value="{{ old('address', $user->address) }}" required>
+                <input type="text" class="input form-control" id="address" name="address" value="{{ old('address', $user->address) }}" >
             </div>
 
+            <div class="coolinput col-md-12">
+                <label for="path" class="text">Hình ảnh chỉnh sửa:</label>
+                <input type="file" class="input form-control edit-path-img" id="path" name="path" accept="image/*">
+            </div>
 
             <div class="form-group">
                 <button type="submit" class="btn btn-success save-user">
                     <i class="bi bi-floppy-fill"></i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-floppy-fill" viewBox="0 0 16 16"><path d="M0 1.5A1.5 1.5 0 0 1 1.5 0H3v5.5A1.5 1.5 0 0 0 4.5 7h7A1.5 1.5 0 0 0 13 5.5V0h.086a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5H14v-5.5A1.5 1.5 0 0 0 12.5 9h-9A1.5 1.5 0 0 0 2 10.5V16h-.5A1.5 1.5 0 0 1 0 14.5z"/><path d="M3 16h10v-5.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5zm9-16H4v5.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5zM9 1h2v4H9z"/></svg>
-                    LƯU
+                    Lưu
                 </button>
                 <a href="{{ route('admin.user.list') }}" class="btn btn-danger close-user">
                     <i class="bi bi-x-square-fill"></i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708"/></svg>
-                    HUỶ
+                    Hủy
                 </a>
             </div>
         </form>
@@ -98,7 +118,7 @@
     @endif
 
     @if (session('error-update-user'))
-        <div id="flash-message" class="message-error-update-user"> {{ session('error-update-category') }} </div>
+        <div id="flash-message" class="message-error-update-user"> {{ session('error-update-user') }} </div>
     @endif
     @endsection
 

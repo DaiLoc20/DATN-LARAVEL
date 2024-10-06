@@ -10,6 +10,7 @@
     box-shadow: 0 0 1px 1px rgb(249, 249, 249);
 }
 
+
 .breadcrumb-item,.breadcrumb-item.active { font-weight: bold; font-size: 12px; }
 .navbar-brand.name{ color: #ffffff; font-weight: 900; font-size: 15px;}
 .navbar-brand.name:hover { color: #ffffff;}
@@ -20,11 +21,37 @@
 .option-none{background-color: rgb(255, 255, 255);}
 .form-ProductPlus{  width: 50%; padding: 20px; background-color: rgb(255, 255, 255); }
 .input.form-control.is_parent{ border: 2px solid #646464; border-radius: 5px; font-size: 0.9rem;padding: 11px 10px; }
+
+.navbar-product.name{ color: #ffffff; font-weight: 900; font-size: 15px;}
+.navbar-product.name:hover { color: #ffffff;}
+.bi.bi-window-stack.icon-product { background-color: white; color: rgb(13 110 253);}
+.breadcrumb-item,.breadcrumb-item.active { font-weight: bold; font-size: 12px;}
+.btn.btn-search{ background-color: rgb(13 110 253); color: white;}
+.btn.btn-search:hover{ background-color: rgb(2, 87, 214); color: white;}
+.form-control.me-2.font-search{ font-weight: 900; }
+.d-flex.form-search { margin-right: -6%;}
+/*Thanh điều hướng*/
+/*Bảng Thêm Sản Phẩm*/
+.form-label.name-Product{ font-weight: 900; font-size: 14px; vertical-align: middle; margin-top: 10px;margin-bottom: 5px;}
+.form-label.name-Product  {font-weight: 900; font-size: 14px; vertical-align: middle; margin-top: 10px;margin-bottom: 5px;}
+.form-control.input-Product{ width: 80% ; margin-top: 5px; font-size: 14px;}
+.input.form-control.category { padding: 11px 10px; font-size: 0.9rem; border: 2px #646464 solid; border-radius: 5px;  background: #ffffff; }
+.input.form-control.brand { padding: 11px 10px; font-size: 0.9rem; border: 2px #646464 solid; border-radius: 5px;  background: #ffffff; }
+.btn.btn-success.save-Product,.btn.btn-danger.close-Product{ margin-top: 10px; font-size: 1rem; font-weight: 900;}
+.option-none{background-color: rgb(255, 255, 255);}
+.form-ProductPlus{  width: 50%; padding: 20px; margin-top: -25px;  background-color: rgb(255, 255, 255); }
+
 .coolinput { display: flex; flex-direction: column; width: fit-content; position: static;  max-width: 240px; }
 .coolinput label.text { font-size: 0.9rem; color: #646464; font-weight: 700;
                         position: relative; top: 0.5rem; margin: 0 0 0 7px; padding: 0 3px; background: #ffffff; width: fit-content; }
 .coolinput input[type=text].input { padding: 11px 10px; font-size: 0.9rem; border: 2px #646464 solid; border-radius: 5px;  background: #ffffff; }
 .coolinput input[type=text].input:focus { outline: none; }
+
+
+
+/*Bảng Thêm Sản Phẩm*/
+#flash-message { transition: opacity 0.5s ease-out; }
+#flash-message.hide { opacity: 0; }
 
 .message-success-store-product{
     font-weight: 600; font-size: 15px; text-align: center; color: #ffffff;
@@ -42,5 +69,6 @@
     width: 300px; height: 50px; padding: 10px;
     box-shadow:0  0 1px 1px red;
 }
+
 
 

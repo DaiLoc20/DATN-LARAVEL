@@ -18,7 +18,11 @@ class StoreBrandsRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [ 'name' => 'required|string|max:50|unique:brands,name',  ];
+        return [
+            'name' => 'required|string|max:50|unique:brands,name',
+            'path' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ];
+
     }
     public function messages(): array
     {

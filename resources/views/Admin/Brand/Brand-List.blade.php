@@ -6,7 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="/css/Brand_Admin.css" rel="stylesheet">
-    <title>Hãng Sản Xuất ( BRAND )</title>
+    <title>Hãng Sản Xuất | BRAND |</title>
 </head>
 <body>
     @extends('Layouts.Layout_Admin')
@@ -22,7 +22,7 @@
               <a class="navbar-brand name" href="/Admin/Brand/BrandList">
                 <i class="bi bi-motherboard icon-brand"></i>
                 <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-motherboard icon-brand" viewBox="0 -3.5 16 22"> <path d="M11.5 2a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5m2 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5m-10 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zM5 3a1 1 0 0 0-1 1h-.5a.5.5 0 0 0 0 1H4v1h-.5a.5.5 0 0 0 0 1H4a1 1 0 0 0 1 1v.5a.5.5 0 0 0 1 0V8h1v.5a.5.5 0 0 0 1 0V8a1 1 0 0 0 1-1h.5a.5.5 0 0 0 0-1H9V5h.5a.5.5 0 0 0 0-1H9a1 1 0 0 0-1-1v-.5a.5.5 0 0 0-1 0V3H6v-.5a.5.5 0 0 0-1 0zm0 1h3v3H5zm6.5 7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/> <path d="M1 2a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-2H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 9H1V8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6H1V5H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 2zm1 11a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1z"/></svg>
-                DANH SÁCH HÃNG SẢN XUẤT ( BRAND )
+                DANH SÁCH HÃNG SẢN XUẤT | BRAND |
               </a>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -69,22 +69,34 @@
                     </a>
                </button>
                <button class="btn btn-success show-new-brand">
-                    <a class="nav-link" href="{{ route('admin.brands.list', ['sort' => $sort, 'show_new' => true]) }}" >HIỂN THỊ BRAND MỚI TẠO </a>
+                    <a class="nav-link" href="{{ route('admin.brands.list', ['sort' => $sort, 'show_new' => true]) }}" >BRAND MỚI THÊM</a>
                </button>
                <button class="btn btn-success show-edit-brand">
-                    <a class="nav-link"href="{{ route('admin.brands.list', ['sort' => $sort, 'show_edited' => true]) }}">HIỂN THỊ BRAND VỪA CHỈNH SỬA</a>
+                    <a class="nav-link"href="{{ route('admin.brands.list', ['sort' => $sort, 'show_edited' => true]) }}">BRAND VỪA CHỈNH SỬA</a>
                </button>
+               <form action="{{ route('admin.brands.list') }}" method="GET"class="d-flex search" role="search">
+                    <input type="text" name="search" class="form-control me-2 search" placeholder="Tìm kiếm ..." aria-label="Search" value="{{ $search }}">
+                    <input type="hidden" name="sort" value="{{ $sort }}">
+                    <button class="btn btn-success" type="submit">
+                        <i class="bi bi-search"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"> <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>
+                    </button>
+                </form>
             </div>
        </nav>
+        <div class="result-seacrh">
+            @if($search)
+                <p>Kết quả tìm kiếm cho : " {{ $search }} "</p>
+            @endif
+        </div>
 
     @if($brands->isEmpty())
        <div class="alert alert-info">
            @if($showNew)
-               Không Có Brand Nào Được Thêm Mới Trong 24 Giờ Qua.
+               Không có hãng sản xuất nào được thêm mới trong 24 giờ qua.
            @elseif($showEdited)
-               Không Có Brand Nào Được Chỉnh Sửa Trong 24 Giờ Qua.
+               Không có hãng sản xuất nào được chỉnh sửa trong 24 giờ qua.
            @else
-               Không Có Brand Nào Trong Danh Sách.
+               Không có hãng sản xuất nào trong danh sách
            @endif
        </div>
     @else
@@ -92,6 +104,7 @@
         <thead  class="table-backgroupColor">
           <tr>
             <th scope="col" class="border-th-stt">STT</th>
+            <th scope="col" class="border-th-stt">ID</th>
             <th scope="col" class="border-th-name">TÊN ( BRAND )</th>
             <th scope="col" class="border-th-img">HÌNH ẢNH</th>
             <th scope="col" class="border-th-function">CHỨC NĂNG</th>
@@ -104,18 +117,15 @@
           @foreach($brands as $brand)
              <tr>
                 <td class="border-width-STT">{{$stt++}}</td>
+                <td class="border-width-STT">{{$brand->id}}</td>
                 <td class="border-width-Name">{{$brand->name}}</td>
                 <td class="border-width-Img">
-                    @if ($brand->images->isNotEmpty())
+                @if ($brand->images->isNotEmpty())
                     @foreach($brand->images as $image)
-                        <img class="img-brand" src="{{ $image->path }}" alt="{{ $brand->name }}">
+                        <img class="img-brand" src="{{ $image->path }}"  alt="{{ $brand->name }}">
                     @endforeach
                 @else
-                      <i class="bi bi-card-image"></i>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-image" viewBox="0 0 16 16">
-                        <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
-                        <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2zm13 1a.5.5 0 0 1 .5.5v6l-3.775-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12v.54L1 12.5v-9a.5.5 0 0 1 .5-.5z"/>
-                      </svg>
+                    <img class="no-img-brand" src="/storage/img/NoImage/NO-IMAGE.jpg" alt="">
                 @endif
               </td>
                 <td class="border-width-Function">

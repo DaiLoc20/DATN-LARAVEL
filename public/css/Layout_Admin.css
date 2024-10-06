@@ -26,18 +26,18 @@
 /*Hình ảnh */
 /*Danh Sách*/
 .col-3.col3-list-group{
-    background-color: rgb(255, 255, 255);
+    background-color: #3368fb;
     border-radius: 10px;
-    margin-left: 10px;
-    margin-top: 5px;
+    margin-left: 20px;
+    margin-top: 15px;
     margin-bottom: 10px;
     width: 17%;
     box-shadow: 0 0 1px 1px rgb(255, 255, 255);
 }
 .list-group-item{
-    background-color: rgb(255 255 255);
+    background-color: #3368fb;
     border: none;
-    color: #646464;
+    color: #ffffff;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 900;
@@ -47,17 +47,17 @@
 .list-group-item:hover{
     border-radius: 10px;
     width: 100%;
-    color: white;
-    background-color: #3368fb;
+    color: rgb(86, 86, 86);
+    background-color: #ffffff;
     text-align: center;
     font-size: 15px;
     font-weight: 900;
 }
 .list-group-item:hover .bi.bi-houses, .list-group-item:hover .bi.bi-person-badge,.list-group-item:hover .bi.bi-motherboard,.list-group-item:hover .bi.bi-window,.list-group-item:hover .bi.bi-window-stack,.list-group-item:hover .bi.bi-postcard,.list-group-item:hover .bi.bi-file-image,.list-group-item:hover .bi.bi-clipboard-check,
-.list-group-item:hover .bi.bi-clipboard-pulse, .list-group-item:hover .bi.bi-box-arrow-right{ color: #3368fb; background-color: #ffffff; }
+.list-group-item:hover .bi.bi-clipboard-pulse, .list-group-item:hover .bi.bi-box-arrow-right{ color: white; background-color: #3368fb; }
 .bi.bi-houses,.bi.bi-person-badge,.bi.bi-motherboard,.bi.bi-window,.bi.bi-window-stack,.bi.bi-postcard,.bi.bi-file-image,.bi.bi-clipboard-check,
 .bi.bi-clipboard-pulse,.bi.bi-box-arrow-right { width:25px ; height:25px ; margin-right: 4px; border-radius: 5px;
-color: white; background-color: #3368fb; transform: scale(1.2);box-shadow: 0 4px 8px rgba(167, 167, 167, 0.3); }
+color: #3368fb; background-color: #ffffff; transform: scale(1.2);box-shadow: 0 4px 8px rgba(167, 167, 167, 0.3); }
 /*Danh Sách*/
 /*Content*/
 .col-9{ background-color: rgb(255, 255, 255); border-radius: 10px; margin-left: 6px; margin-top: 4px; margin-bottom: 3px; }

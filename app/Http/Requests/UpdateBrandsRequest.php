@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Requests;
-
+use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateBrandsRequest extends FormRequest
@@ -21,7 +21,10 @@ class UpdateBrandsRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [ 'name' => 'required|string|max:50|unique:brands,name', ];
+        return [
+                'name' => [ 'required','string','max:50',Rule::unique('brands')->ignore($this->brands) ],
+                'path' => [ 'image','mimes:jpeg,png,jpg,gif','max:2048' ],
+        ];
     }
     public function messages(): array
     {
@@ -29,8 +32,6 @@ class UpdateBrandsRequest extends FormRequest
             'name.required' => 'Tên hãng sản xuất là bắt buộc.',
             'name.string' => 'Tên hãng sản xuất phải là một chuỗi.',
             'name.max' => 'Tên hãng sản xuất không được vượt quá 50 ký tự.',
-            'name.unique' => 'Tên hãng sản xuất đã tồn tại.',
-
         ];
     }
 }

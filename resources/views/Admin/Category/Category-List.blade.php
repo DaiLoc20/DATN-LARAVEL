@@ -84,24 +84,35 @@
                 </a>
            </button>
            <button class="btn btn-success show-new-category">
-                <a class="nav-link" href="{{ route('admin.category.list', ['sort' => $sort, 'show_new' => true]) }}">HIỂN THỊ CATEGORY MỚI TẠO </a>
+                <a class="nav-link" href="{{ route('admin.category.list', ['sort' => $sort, 'show_new' => true]) }}">CATEGORY MỚI THÊM</a>
            </button>
            <button class="btn btn-success show-edit-category">
-                <a class="nav-link"href="{{ route('admin.category.list', ['sort' => $sort, 'show_edited' => true]) }}">HIỂN THỊ CATEGORY VỪA CHỈNH SỬA</a>
+                <a class="nav-link"href="{{ route('admin.category.list', ['sort' => $sort, 'show_edited' => true]) }}">CATEGORY VỪA CHỈNH SỬA</a>
            </button>
+           <form action="{{ route('admin.category.list') }}" method="GET"class="d-flex search" role="search">
+                <input type="text" name="search" class="form-control me-2 search" placeholder="Tìm kiếm ..." aria-label="Search" value="{{ $search }}">
+                <input type="hidden" name="sort" value="{{ $sort }}">
+                <button class="btn btn-success" type="submit">
+                    <i class="bi bi-search"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"> <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>
+                </button>
+           </form>
         </div>
-
    </nav>
+    <div class="result-seacrh">
+    @if($search)
+        <p>Kết quả tìm kiếm cho : " {{ $search }} "</p>
+    @endif
+   </div>
    @if($categories->isEmpty())
    <div class="alert alert-info">
-       @if($showNew)
-           Không Có Loại Sản Phẩm Nào Được Thêm Mới Trong 24 Giờ Qua.
-       @elseif($showEdited)
-           Không Có Loại Sản Phẩm Nào Được Chỉnh Sửa Trong 24 Giờ Qua.
-       @else
-           Không Có Loại Sản Phẩm Nào Trong Danh Sách.
-       @endif
-   </div>
+    @if($showNew)
+        Không có loại sản phẩm nào được thêm mới trong 24 giờ qua.
+    @elseif($showEdited)
+        Không có loại sản phẩm nào được chỉnh sửa trong 24 giờ qua.
+    @else
+       Không có loại sản phẩm nào trong danh sách.
+    @endif
+</div>
   @else
    <table class="table">
     <thead class="table-backgroupColor">
@@ -132,12 +143,12 @@
                     @endif
                 </td>
                 <td class="category-border-td-img">
-                    @if( $category->images)
+                    @if ($category->images->isNotEmpty())
                         @foreach($category->images as $image)
-                            <img class="img-parent" src="{{ $image->path }}" alt="{{ $category->name }}">
+                            <img class="img-category" src="{{ $image->path }}"  alt="{{ $category->name }}">
                         @endforeach
                     @else
-
+                        <img class="no-img-category" src="/storage/img/NoImage/NO-IMAGE.jpg" alt="">
                     @endif
                 </td>
                 <td class="category-border-td-categoryProduct">
@@ -170,7 +181,11 @@
                                 </a>
                             </button>
                         </form>
+
                         <form class="detele"action="{{ route('admin.category.destroy', $category->id) }}" method="POST" >
+
+                        <form  class="delete" action="{{ route('admin.category.destroy', $category->id) }}" method="POST">
+
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa loại sản phẩm này?')">

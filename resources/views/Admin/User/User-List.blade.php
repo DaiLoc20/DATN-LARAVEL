@@ -63,22 +63,33 @@
                 </a>
            </button>
            <button class="btn btn-success show-new-category">
-                <a class="nav-link" href="{{ route('admin.user.list', ['sort' => $sort, 'show_new' => true]) }}">HIỂN THỊ TÀI KHOẢN MỚI TẠO </a>
+                <a class="nav-link" href="{{ route('admin.user.list', ['sort' => $sort, 'show_new' => true]) }}">TÀI KHOẢN MỚI THÊM</a>
            </button>
            <button class="btn btn-success show-edit-category">
-                <a class="nav-link"href="{{ route('admin.user.list', ['sort' => $sort, 'show_edited' => true]) }}">HIỂN THỊ TÀI KHOẢN VỪA CHỈNH SỬA</a>
+                <a class="nav-link"href="{{ route('admin.user.list', ['sort' => $sort, 'show_edited' => true]) }}">TÀI KHOẢN VỪA CHỈNH SỬA</a>
            </button>
+            <form action="{{ route('admin.user.list') }}" method="GET"class="d-flex search" role="search">
+                <input type="text" name="search" class="form-control me-2 search" placeholder="Tìm kiếm ..." aria-label="Search" value="{{ $search }}">
+                <input type="hidden" name="sort" value="{{ $sort }}">
+                <button class="btn btn-success" type="submit">
+                        <i class="bi bi-search"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"> <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>
+               </button>
+             </form>
         </div>
-
    </nav>
+   <div class="result-seacrh">
+        @if($search)
+            <p>Kết quả tìm kiếm cho : " {{ $search }} "</p>
+        @endif
+   </div>
    @if($users->isEmpty())
    <div class="alert alert-info">
        @if($showNew)
-           Không Có Tài Khoản Nào Được Thêm Mới Trong 24 Giờ Qua.
+           Không có tài khoản nào được thêm mới trong 24 giờ qua.
        @elseif($showEdited)
-           Không Có Tài Khoản Nào Được Chỉnh Sửa Trong 24 Giờ Qua.
+           Không có tài khoản nào được chỉnh sửa trong 24 giờ qua.
        @else
-           Không Có Tài Khoản Nào Trong Danh Sách.
+           Không có tài khoản nào danh sách
        @endif
    </div>
   @else
@@ -110,7 +121,13 @@
                     @endforeach
                 </td>
                 <td class="admin-border-td-name">{{ $user->last_name }} {{ $user->first_name}}</td>
-                <td class="admin-border-td-name">{{ $user->is_user_admin == 0 ? 'User' : 'Admin'}}</td>
+                <td class="admin-border-td-name">
+                    @if ($user->is_user_admin == 0 )
+                        User
+                    @else
+                        <strong>Admin</strong>
+                    @endif
+                </td>
                 <td class="admin-border-td-email">{{ $user->email }}</td>
                 <td class="admin-border-td-gender">{{ $user->gender == 0 ? 'Nam' : 'Nữ' }}</td>
                 <td class="admin-border-td-birthday">{{ $user->birthday ? \Carbon\Carbon::parse($user->birthday)->format('d-m-Y') : 'N/A' }}</td>
